@@ -1,0 +1,109 @@
+\hypertarget{classIterator__t}{}\doxysection{Iterator\+\_\+t Class Reference}
+\label{classIterator__t}\index{Iterator\_t@{Iterator\_t}}
+
+
+The iterator object. Used for looping over a collection objects (eg \mbox{\hyperlink{classList__t}{List\+\_\+t}}, \mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}}).  
+
+
+
+
+{\ttfamily \#include $<$iterator.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classIterator__t_a70e52dc1dc137adbd9192d3ed51f02ac}{Iterator\+Next}} (\mbox{\hyperlink{classIterator__t}{Iterator\+\_\+t}} $\ast$it)
+\begin{DoxyCompactList}\small\item\em Move the iterator to the next object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIterator__t_a4b0979a07e3fd4efbec359f61330eb51}{Iterator\+Previous}} (\mbox{\hyperlink{classIterator__t}{Iterator\+\_\+t}} $\ast$it)
+\begin{DoxyCompactList}\small\item\em Move the iterator to the previous object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classIterator__t_aa73158a3c8e7585d737ead31a41f8361}{Iterator\+Done}} (\mbox{\hyperlink{classIterator__t}{Iterator\+\_\+t}} $\ast$it)
+\begin{DoxyCompactList}\small\item\em Test if the iterator is done. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{classIterator__t_a7a021c360403709fbb7ab6d6b8ae1f81}{Iterator\+Item}} (\mbox{\hyperlink{classIterator__t}{Iterator\+\_\+t}} $\ast$it)
+\begin{DoxyCompactList}\small\item\em Returns a void$\ast$ to the current item in the collection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The iterator object. Used for looping over a collection objects (eg \mbox{\hyperlink{classList__t}{List\+\_\+t}}, \mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}}). 
+
+Example usage on a buffer of integers\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\mbox{\hyperlink{classIterator__t}{Iterator\_t}} it = NewBufferIterator(buffer); !\mbox{\hyperlink{classIterator__t_aa73158a3c8e7585d737ead31a41f8361}{IteratorDone}}(\&it); \mbox{\hyperlink{classIterator__t_a70e52dc1dc137adbd9192d3ed51f02ac}{IteratorNext}}(\&it))}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    uint64\_t *my\_number\_ptr = \mbox{\hyperlink{classIterator__t_a7a021c360403709fbb7ab6d6b8ae1f81}{IteratorItem}}(\&it);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIterator__t_aa73158a3c8e7585d737ead31a41f8361}\label{classIterator__t_aa73158a3c8e7585d737ead31a41f8361}} 
+\index{Iterator\_t@{Iterator\_t}!IteratorDone@{IteratorDone}}
+\index{IteratorDone@{IteratorDone}!Iterator\_t@{Iterator\_t}}
+\doxysubsubsection{\texorpdfstring{IteratorDone()}{IteratorDone()}}
+{\footnotesize\ttfamily bool Iterator\+Done (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIterator__t}{Iterator\+\_\+t}} $\ast$}]{it }\end{DoxyParamCaption})}
+
+
+
+Test if the iterator is done. 
+
+This method will return \textquotesingle{}true\textquotesingle{} if the iterator has passed the final object in the collection. If there are still objects remaining, it will return \textquotesingle{}false\textquotesingle{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em it} & The iterator to test against \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classIterator__t_a7a021c360403709fbb7ab6d6b8ae1f81}\label{classIterator__t_a7a021c360403709fbb7ab6d6b8ae1f81}} 
+\index{Iterator\_t@{Iterator\_t}!IteratorItem@{IteratorItem}}
+\index{IteratorItem@{IteratorItem}!Iterator\_t@{Iterator\_t}}
+\doxysubsubsection{\texorpdfstring{IteratorItem()}{IteratorItem()}}
+{\footnotesize\ttfamily void $\ast$ Iterator\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIterator__t}{Iterator\+\_\+t}} $\ast$}]{it }\end{DoxyParamCaption})}
+
+
+
+Returns a void$\ast$ to the current item in the collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em it} & The iterator to pull an item from \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classIterator__t_a70e52dc1dc137adbd9192d3ed51f02ac}\label{classIterator__t_a70e52dc1dc137adbd9192d3ed51f02ac}} 
+\index{Iterator\_t@{Iterator\_t}!IteratorNext@{IteratorNext}}
+\index{IteratorNext@{IteratorNext}!Iterator\_t@{Iterator\_t}}
+\doxysubsubsection{\texorpdfstring{IteratorNext()}{IteratorNext()}}
+{\footnotesize\ttfamily void Iterator\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIterator__t}{Iterator\+\_\+t}} $\ast$}]{it }\end{DoxyParamCaption})}
+
+
+
+Move the iterator to the next object. 
+
+Used at the end of an iteration to move the iterator onto the next object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em it} & The iterator to increment \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classIterator__t_a4b0979a07e3fd4efbec359f61330eb51}\label{classIterator__t_a4b0979a07e3fd4efbec359f61330eb51}} 
+\index{Iterator\_t@{Iterator\_t}!IteratorPrevious@{IteratorPrevious}}
+\index{IteratorPrevious@{IteratorPrevious}!Iterator\_t@{Iterator\_t}}
+\doxysubsubsection{\texorpdfstring{IteratorPrevious()}{IteratorPrevious()}}
+{\footnotesize\ttfamily void Iterator\+Previous (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIterator__t}{Iterator\+\_\+t}} $\ast$}]{it }\end{DoxyParamCaption})}
+
+
+
+Move the iterator to the previous object. 
+
+Used at the end of an iteration to move the iterator onto the previous object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em it} & The iterator to decrement \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{iterator_8h}{iterator.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,11 @@
+Data Structures to Add
+    - Stream to abstract over files and
+    character streams
+    - Finite State Machines?
+    - Regex?
+    - Threading model? - Simple wrapper around pthreads?
+    - Event Loop? - Event handlers with an emit_event, and event generators?
+
+Philosophy: Don't add an item until it has
+been used in a project, and has proven useful
+in that project

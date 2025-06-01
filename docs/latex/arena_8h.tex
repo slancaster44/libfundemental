@@ -1,0 +1,74 @@
+\hypertarget{arena_8h}{}\doxysection{inc/arena.h File Reference}
+\label{arena_8h}\index{inc/arena.h@{inc/arena.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+Include dependency graph for arena.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{arena_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{arena_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{arena_8h_a76542edd965392f01c15551b1efd1d77}{ARENA\+\_\+\+BLOCK\+\_\+\+SIZE}}~4096
+\item 
+\#define \mbox{\hyperlink{arena_8h_a231c484a72b52d9ad02eeaafd4b43681}{ARENA\+\_\+\+BLOCK\+\_\+\+MAX\+\_\+\+MEM}}~(\mbox{\hyperlink{arena_8h_a76542edd965392f01c15551b1efd1d77}{ARENA\+\_\+\+BLOCK\+\_\+\+SIZE}} -\/ sizeof(Arena\+Block\+\_\+t))
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{arena_8h_aacc027a67358e602e65f7a481e59b542}\label{arena_8h_aacc027a67358e602e65f7a481e59b542}} 
+typedef struct \+\_\+arena\+\_\+s {\bfseries Arena\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} \mbox{\hyperlink{arena_8h_a69a07afe0c3228a4d96a5a345a33a3f0}{ARENA\+\_\+\+PERM}} = \{NULL\}
+\item 
+static \mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} \mbox{\hyperlink{arena_8h_a6267f464eaecd9b5e32f0965c5316cb4}{ARENA\+\_\+\+NONE}} = \{(void $\ast$)-\/1\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Memory management arena implementation. Enables grouping allocations together, so they may be free\textquotesingle{}d together 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{arena_8h_a231c484a72b52d9ad02eeaafd4b43681}\label{arena_8h_a231c484a72b52d9ad02eeaafd4b43681}} 
+\index{arena.h@{arena.h}!ARENA\_BLOCK\_MAX\_MEM@{ARENA\_BLOCK\_MAX\_MEM}}
+\index{ARENA\_BLOCK\_MAX\_MEM@{ARENA\_BLOCK\_MAX\_MEM}!arena.h@{arena.h}}
+\doxysubsubsection{\texorpdfstring{ARENA\_BLOCK\_MAX\_MEM}{ARENA\_BLOCK\_MAX\_MEM}}
+{\footnotesize\ttfamily \#define ARENA\+\_\+\+BLOCK\+\_\+\+MAX\+\_\+\+MEM~(\mbox{\hyperlink{arena_8h_a76542edd965392f01c15551b1efd1d77}{ARENA\+\_\+\+BLOCK\+\_\+\+SIZE}} -\/ sizeof(Arena\+Block\+\_\+t))}
+
+The maxium amount of free memory that could be in an arena. \mbox{\Hypertarget{arena_8h_a76542edd965392f01c15551b1efd1d77}\label{arena_8h_a76542edd965392f01c15551b1efd1d77}} 
+\index{arena.h@{arena.h}!ARENA\_BLOCK\_SIZE@{ARENA\_BLOCK\_SIZE}}
+\index{ARENA\_BLOCK\_SIZE@{ARENA\_BLOCK\_SIZE}!arena.h@{arena.h}}
+\doxysubsubsection{\texorpdfstring{ARENA\_BLOCK\_SIZE}{ARENA\_BLOCK\_SIZE}}
+{\footnotesize\ttfamily \#define ARENA\+\_\+\+BLOCK\+\_\+\+SIZE~4096}
+
+Size of arena block when allocated. When the block is full a new block will be allocated using \textquotesingle{}malloc().\textquotesingle{} When an allocation is larger than ARENA\+\_\+\+BLOCK\+\_\+\+SIZE, a special block, large enough for the allocation, will be malloc\textquotesingle{}d 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{arena_8h_a6267f464eaecd9b5e32f0965c5316cb4}\label{arena_8h_a6267f464eaecd9b5e32f0965c5316cb4}} 
+\index{arena.h@{arena.h}!ARENA\_NONE@{ARENA\_NONE}}
+\index{ARENA\_NONE@{ARENA\_NONE}!arena.h@{arena.h}}
+\doxysubsubsection{\texorpdfstring{ARENA\_NONE}{ARENA\_NONE}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} ARENA\+\_\+\+NONE = \{(void $\ast$)-\/1\}\hspace{0.3cm}{\ttfamily [static]}}
+
+The \textquotesingle{}none\textquotesingle{} arena. This is not a real arena. Allocations against this arena will simply call malloc. It is up to the user to free the returned memory themselves. \mbox{\Hypertarget{arena_8h_a69a07afe0c3228a4d96a5a345a33a3f0}\label{arena_8h_a69a07afe0c3228a4d96a5a345a33a3f0}} 
+\index{arena.h@{arena.h}!ARENA\_PERM@{ARENA\_PERM}}
+\index{ARENA\_PERM@{ARENA\_PERM}!arena.h@{arena.h}}
+\doxysubsubsection{\texorpdfstring{ARENA\_PERM}{ARENA\_PERM}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} ARENA\+\_\+\+PERM = \{NULL\}\hspace{0.3cm}{\ttfamily [static]}}
+
+The permanent arena. This arena will be initialized on program startup, and deconstructed on program exit. Allows dynamic allocation of objects that will last the life of the program 

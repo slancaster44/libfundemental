@@ -1,0 +1,76 @@
+\hypertarget{classListNode__t}{}\doxysection{List\+Node\+\_\+t Class Reference}
+\label{classListNode__t}\index{ListNode\_t@{ListNode\_t}}
+
+
+A linked list element.  
+
+
+
+
+{\ttfamily \#include $<$linked\+\_\+list.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} $\ast$ \mbox{\hyperlink{classListNode__t_a497d56dc0f428b1c97262c2e165c7269}{New\+List\+Node}} (\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$arena, void $\ast$\mbox{\hyperlink{classListNode__t_a5c239a1bb87b52b0f1d6d68c4749cd2a}{data}}, uint64\+\_\+t \mbox{\hyperlink{classListNode__t_a190b76b1f3d5bd26920300e5f073739b}{length}})
+\item 
+void \mbox{\hyperlink{classListNode__t_a42367671d3fc9280649336c9e5e796bc}{List\+Node\+Write\+Data}} (\mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} $\ast$ln, void $\ast$\mbox{\hyperlink{classListNode__t_a5c239a1bb87b52b0f1d6d68c4749cd2a}{data}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classListNode__t_af036300989bbf75187a6feee14f489b8}\label{classListNode__t_af036300989bbf75187a6feee14f489b8}} 
+struct \+\_\+list\+\_\+node\+\_\+s $\ast$ \mbox{\hyperlink{classListNode__t_af036300989bbf75187a6feee14f489b8}{next}}
+\begin{DoxyCompactList}\small\item\em The next item in the linked list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classListNode__t_a2654488ad901e452c48b575183cb2990}\label{classListNode__t_a2654488ad901e452c48b575183cb2990}} 
+struct \+\_\+list\+\_\+node\+\_\+s $\ast$ \mbox{\hyperlink{classListNode__t_a2654488ad901e452c48b575183cb2990}{previous}}
+\begin{DoxyCompactList}\small\item\em The previous item in the linked list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classListNode__t_a190b76b1f3d5bd26920300e5f073739b}\label{classListNode__t_a190b76b1f3d5bd26920300e5f073739b}} 
+uint64\+\_\+t \mbox{\hyperlink{classListNode__t_a190b76b1f3d5bd26920300e5f073739b}{length}}
+\begin{DoxyCompactList}\small\item\em The length of the data element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classListNode__t_a5c239a1bb87b52b0f1d6d68c4749cd2a}\label{classListNode__t_a5c239a1bb87b52b0f1d6d68c4749cd2a}} 
+uint8\+\_\+t \mbox{\hyperlink{classListNode__t_a5c239a1bb87b52b0f1d6d68c4749cd2a}{data}} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em The data stored in this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A linked list element. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classListNode__t_a42367671d3fc9280649336c9e5e796bc}\label{classListNode__t_a42367671d3fc9280649336c9e5e796bc}} 
+\index{ListNode\_t@{ListNode\_t}!ListNodeWriteData@{ListNodeWriteData}}
+\index{ListNodeWriteData@{ListNodeWriteData}!ListNode\_t@{ListNode\_t}}
+\doxysubsubsection{\texorpdfstring{ListNodeWriteData()}{ListNodeWriteData()}}
+{\footnotesize\ttfamily void List\+Node\+Write\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} $\ast$}]{ln,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+Write to the data section of the given list node
+
+
+\begin{DoxyParams}{Parameters}
+{\em ln} & The list node to write the given data to \\
+\hline
+{\em data} & The data to write th the list node \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classListNode__t_a497d56dc0f428b1c97262c2e165c7269}\label{classListNode__t_a497d56dc0f428b1c97262c2e165c7269}} 
+\index{ListNode\_t@{ListNode\_t}!NewListNode@{NewListNode}}
+\index{NewListNode@{NewListNode}!ListNode\_t@{ListNode\_t}}
+\doxysubsubsection{\texorpdfstring{NewListNode()}{NewListNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} $\ast$ New\+List\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$}]{arena,  }\item[{void $\ast$}]{data,  }\item[{uint64\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+Create a list node of a given length, and copy the data into it. The next and previous elements will be initialized to the same node
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & The arena to allocate against. ARENA\+\_\+\+NONE will simply use malloc(). Calling free() on a \mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} is only valid if it was allocated against ARENA\+\_\+\+NONE\\
+\hline
+{\em data} & The data to copy into the list node. If it is NULL, the node\textquotesingle{}s data section will be left uninitialized\\
+\hline
+{\em length} & The length of the data section. The total size of the node can be given by the LIST\+\_\+\+NODE\+\_\+\+SIZE macro \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{linked__list_8h}{linked\+\_\+list.\+h}}\end{DoxyCompactItemize}

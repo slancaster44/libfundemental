@@ -1,0 +1,72 @@
+\hypertarget{classArena__t}{}\doxysection{Arena\+\_\+t Class Reference}
+\label{classArena__t}\index{Arena\_t@{Arena\_t}}
+
+
+A memory allocation arena.  
+
+
+
+
+{\ttfamily \#include $<$arena.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classArena__t_acef1de231590dce61c354a69e56b37eb}{Construct\+Arena}} (\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$a)
+\item 
+void \mbox{\hyperlink{classArena__t_a412dcb8c52f0c24efb33b154c6cf240d}{Deconstruct\+Arena}} (\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$a)
+\item 
+void $\ast$ \mbox{\hyperlink{classArena__t_a05d4f3e2b0c7be46cc1c52f68f78fc62}{Arena\+Allocate}} (\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$a, uint64\+\_\+t size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A memory allocation arena. 
+
+All values allocated against a given arena will be freed when the arena is deconstructed 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classArena__t_a05d4f3e2b0c7be46cc1c52f68f78fc62}\label{classArena__t_a05d4f3e2b0c7be46cc1c52f68f78fc62}} 
+\index{Arena\_t@{Arena\_t}!ArenaAllocate@{ArenaAllocate}}
+\index{ArenaAllocate@{ArenaAllocate}!Arena\_t@{Arena\_t}}
+\doxysubsubsection{\texorpdfstring{ArenaAllocate()}{ArenaAllocate()}}
+{\footnotesize\ttfamily void $\ast$ Arena\+Allocate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$}]{a,  }\item[{uint64\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+Allocate a buffer of length \textquotesingle{}size\textquotesingle{} to an arena. If the arena is ARENA\+\_\+\+NONE, then simply use \textquotesingle{}malloc()\textquotesingle{} from the standard library
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The arena to allocate to \\
+\hline
+{\em size} & The length of the allocated buffer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classArena__t_acef1de231590dce61c354a69e56b37eb}\label{classArena__t_acef1de231590dce61c354a69e56b37eb}} 
+\index{Arena\_t@{Arena\_t}!ConstructArena@{ConstructArena}}
+\index{ConstructArena@{ConstructArena}!Arena\_t@{Arena\_t}}
+\doxysubsubsection{\texorpdfstring{ConstructArena()}{ConstructArena()}}
+{\footnotesize\ttfamily void Construct\+Arena (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$}]{a }\end{DoxyParamCaption})}
+
+Initialize the given arena 
+\begin{DoxyParams}{Parameters}
+{\em a} & The arena to initialize \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classArena__t_a412dcb8c52f0c24efb33b154c6cf240d}\label{classArena__t_a412dcb8c52f0c24efb33b154c6cf240d}} 
+\index{Arena\_t@{Arena\_t}!DeconstructArena@{DeconstructArena}}
+\index{DeconstructArena@{DeconstructArena}!Arena\_t@{Arena\_t}}
+\doxysubsubsection{\texorpdfstring{DeconstructArena()}{DeconstructArena()}}
+{\footnotesize\ttfamily void Deconstruct\+Arena (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$}]{a }\end{DoxyParamCaption})}
+
+Cleanup the given arena. Free the associated memory blocks
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The arena to cleanup \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{arena_8h}{arena.\+h}}\end{DoxyCompactItemize}

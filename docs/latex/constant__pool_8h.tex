@@ -1,0 +1,38 @@
+\hypertarget{constant__pool_8h}{}\doxysection{inc/constant\+\_\+pool.h File Reference}
+\label{constant__pool_8h}\index{inc/constant\_pool.h@{inc/constant\_pool.h}}
+{\ttfamily \#include \char`\"{}linked\+\_\+list.\+h\char`\"{}}\newline
+Include dependency graph for constant\+\_\+pool.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{constant__pool_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{constant__pool_8h_aced9b7d5f924f0aa36f36b758d75c30e}{NUM\+\_\+\+INTERN\+\_\+\+BUCKETS}}~512
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{constant__pool_8h_ada79be104916824908e4ab7c5c112466}\label{constant__pool_8h_ada79be104916824908e4ab7c5c112466}} 
+typedef struct \+\_\+intern\+\_\+pool\+\_\+s {\bfseries Constant\+Pool\+\_\+t}
+\item 
+\mbox{\Hypertarget{constant__pool_8h_ae7402b12f02d9811f42f6f083d572fe2}\label{constant__pool_8h_ae7402b12f02d9811f42f6f083d572fe2}} 
+typedef struct \+\_\+const\+\_\+obj\+\_\+s {\bfseries Constant\+Object\+\_\+t}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A data structure for interning constant objects, so that memory doesn\textquotesingle{}t need to be allocated for identical objects 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{constant__pool_8h_aced9b7d5f924f0aa36f36b758d75c30e}\label{constant__pool_8h_aced9b7d5f924f0aa36f36b758d75c30e}} 
+\index{constant\_pool.h@{constant\_pool.h}!NUM\_INTERN\_BUCKETS@{NUM\_INTERN\_BUCKETS}}
+\index{NUM\_INTERN\_BUCKETS@{NUM\_INTERN\_BUCKETS}!constant\_pool.h@{constant\_pool.h}}
+\doxysubsubsection{\texorpdfstring{NUM\_INTERN\_BUCKETS}{NUM\_INTERN\_BUCKETS}}
+{\footnotesize\ttfamily \#define NUM\+\_\+\+INTERN\+\_\+\+BUCKETS~512}
+
+The number of hash buckets in the constant pool 

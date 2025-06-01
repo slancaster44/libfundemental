@@ -1,0 +1,138 @@
+\hypertarget{classList__t}{}\doxysection{List\+\_\+t Class Reference}
+\label{classList__t}\index{List\_t@{List\_t}}
+
+
+A linked list.  
+
+
+
+
+{\ttfamily \#include $<$linked\+\_\+list.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classList__t_a0a5f8e1b081b877c37d2b86eb4d91d52}{List\+Insert\+Back}} (\mbox{\hyperlink{classList__t}{List\+\_\+t}} $\ast$list, \mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} $\ast$new\+\_\+node)
+\item 
+\mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} $\ast$ \mbox{\hyperlink{classList__t_a0b01647cd6267415410269d7951400fd}{List\+Remove\+Back}} (\mbox{\hyperlink{classList__t}{List\+\_\+t}} $\ast$list)
+\item 
+void \mbox{\hyperlink{classList__t_a4a6659f11b87077d43a6d3d8381a7dcb}{List\+Insert\+Front}} (\mbox{\hyperlink{classList__t}{List\+\_\+t}} $\ast$list, \mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} $\ast$new\+\_\+node)
+\item 
+\mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} $\ast$ \mbox{\hyperlink{classList__t_a3e9b0c2773f6364d58d1ba562e9207d8}{List\+Remove\+Front}} (\mbox{\hyperlink{classList__t}{List\+\_\+t}} $\ast$list)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classList__t_a8c9674daa1a2b68fa32f5f37f561bc21}{List\+Length}} (\mbox{\hyperlink{classList__t}{List\+\_\+t}} $\ast$list)
+\item 
+\mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} $\ast$ \mbox{\hyperlink{classList__t_a23ade68755a3119af961bf342a49328e}{List\+Index}} (\mbox{\hyperlink{classList__t}{List\+\_\+t}} $\ast$list, uint64\+\_\+t idx)
+\item 
+\mbox{\hyperlink{classIterator__t}{Iterator\+\_\+t}} \mbox{\hyperlink{classList__t_aa979eedcd1c800ba70e2799fbbc3e3a8}{New\+List\+Iterator}} (\mbox{\hyperlink{classList__t}{List\+\_\+t}} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Create an iterator over the given list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A linked list. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classList__t_a23ade68755a3119af961bf342a49328e}\label{classList__t_a23ade68755a3119af961bf342a49328e}} 
+\index{List\_t@{List\_t}!ListIndex@{ListIndex}}
+\index{ListIndex@{ListIndex}!List\_t@{List\_t}}
+\doxysubsubsection{\texorpdfstring{ListIndex()}{ListIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} $\ast$ List\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList__t}{List\+\_\+t}} $\ast$}]{list,  }\item[{uint64\+\_\+t}]{idx }\end{DoxyParamCaption})}
+
+Return the \mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} at a given index
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to index \\
+\hline
+{\em idx} & The index \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classList__t_a0a5f8e1b081b877c37d2b86eb4d91d52}\label{classList__t_a0a5f8e1b081b877c37d2b86eb4d91d52}} 
+\index{List\_t@{List\_t}!ListInsertBack@{ListInsertBack}}
+\index{ListInsertBack@{ListInsertBack}!List\_t@{List\_t}}
+\doxysubsubsection{\texorpdfstring{ListInsertBack()}{ListInsertBack()}}
+{\footnotesize\ttfamily void List\+Insert\+Back (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList__t}{List\+\_\+t}} $\ast$}]{list,  }\item[{\mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} $\ast$}]{new\+\_\+node }\end{DoxyParamCaption})}
+
+Add a list element to the end of a list
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to modify \\
+\hline
+{\em new\+\_\+node} & The list node to add to the list \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classList__t_a4a6659f11b87077d43a6d3d8381a7dcb}\label{classList__t_a4a6659f11b87077d43a6d3d8381a7dcb}} 
+\index{List\_t@{List\_t}!ListInsertFront@{ListInsertFront}}
+\index{ListInsertFront@{ListInsertFront}!List\_t@{List\_t}}
+\doxysubsubsection{\texorpdfstring{ListInsertFront()}{ListInsertFront()}}
+{\footnotesize\ttfamily void List\+Insert\+Front (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList__t}{List\+\_\+t}} $\ast$}]{list,  }\item[{\mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} $\ast$}]{new\+\_\+node }\end{DoxyParamCaption})}
+
+Add a list element to the front of a list
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to modify \\
+\hline
+{\em new\+\_\+node} & The list node to add to the list \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classList__t_a8c9674daa1a2b68fa32f5f37f561bc21}\label{classList__t_a8c9674daa1a2b68fa32f5f37f561bc21}} 
+\index{List\_t@{List\_t}!ListLength@{ListLength}}
+\index{ListLength@{ListLength}!List\_t@{List\_t}}
+\doxysubsubsection{\texorpdfstring{ListLength()}{ListLength()}}
+{\footnotesize\ttfamily uint64\+\_\+t List\+Length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList__t}{List\+\_\+t}} $\ast$}]{list }\end{DoxyParamCaption})}
+
+Get the number of elements in a given list
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to get the length of \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classList__t_a0b01647cd6267415410269d7951400fd}\label{classList__t_a0b01647cd6267415410269d7951400fd}} 
+\index{List\_t@{List\_t}!ListRemoveBack@{ListRemoveBack}}
+\index{ListRemoveBack@{ListRemoveBack}!List\_t@{List\_t}}
+\doxysubsubsection{\texorpdfstring{ListRemoveBack()}{ListRemoveBack()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} $\ast$ List\+Remove\+Back (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList__t}{List\+\_\+t}} $\ast$}]{list }\end{DoxyParamCaption})}
+
+Remove an element from the end list
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to modify \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classList__t_a3e9b0c2773f6364d58d1ba562e9207d8}\label{classList__t_a3e9b0c2773f6364d58d1ba562e9207d8}} 
+\index{List\_t@{List\_t}!ListRemoveFront@{ListRemoveFront}}
+\index{ListRemoveFront@{ListRemoveFront}!List\_t@{List\_t}}
+\doxysubsubsection{\texorpdfstring{ListRemoveFront()}{ListRemoveFront()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} $\ast$ List\+Remove\+Front (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList__t}{List\+\_\+t}} $\ast$}]{list }\end{DoxyParamCaption})}
+
+Remove an element from the front list
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to modify \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classList__t_aa979eedcd1c800ba70e2799fbbc3e3a8}\label{classList__t_aa979eedcd1c800ba70e2799fbbc3e3a8}} 
+\index{List\_t@{List\_t}!NewListIterator@{NewListIterator}}
+\index{NewListIterator@{NewListIterator}!List\_t@{List\_t}}
+\doxysubsubsection{\texorpdfstring{NewListIterator()}{NewListIterator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIterator__t}{Iterator\+\_\+t}} New\+List\+Iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList__t}{List\+\_\+t}} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Create an iterator over the given list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to create the iterator for \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{linked__list_8h}{linked\+\_\+list.\+h}}\end{DoxyCompactItemize}

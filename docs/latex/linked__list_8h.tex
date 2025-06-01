@@ -1,0 +1,47 @@
+\hypertarget{linked__list_8h}{}\doxysection{inc/linked\+\_\+list.h File Reference}
+\label{linked__list_8h}\index{inc/linked\_list.h@{inc/linked\_list.h}}
+{\ttfamily \#include \char`\"{}arena.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}iterator.\+h\char`\"{}}\newline
+Include dependency graph for linked\+\_\+list.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{linked__list_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{linked__list_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{linked__list_8h_acf7308a3e0f7a6fa248a2908de79d13b}{LIST\+\_\+\+LOOP}}(LIST,  ELEM\+\_\+\+NAME)~    (\mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} ELEM\+\_\+\+NAME = LIST-\/$>$first\+\_\+element;)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{linked__list_8h_acf07c8d357e64c3957200f8935d97947}\label{linked__list_8h_acf07c8d357e64c3957200f8935d97947}} 
+typedef struct \+\_\+list\+\_\+node\+\_\+s {\bfseries List\+Node\+\_\+t}
+\item 
+\mbox{\Hypertarget{linked__list_8h_a9c384aa200d11e4979afbb36a33bee2d}\label{linked__list_8h_a9c384aa200d11e4979afbb36a33bee2d}} 
+typedef struct \+\_\+list\+\_\+s {\bfseries List\+\_\+t}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A circular, doubley-\/linked list implementation. All linked list nodes are allocated against a given arena 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{linked__list_8h_acf7308a3e0f7a6fa248a2908de79d13b}\label{linked__list_8h_acf7308a3e0f7a6fa248a2908de79d13b}} 
+\index{linked\_list.h@{linked\_list.h}!LIST\_LOOP@{LIST\_LOOP}}
+\index{LIST\_LOOP@{LIST\_LOOP}!linked\_list.h@{linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{LIST\_LOOP}{LIST\_LOOP}}
+{\footnotesize\ttfamily \#define LIST\+\_\+\+LOOP(\begin{DoxyParamCaption}\item[{}]{LIST,  }\item[{}]{ELEM\+\_\+\+NAME }\end{DoxyParamCaption})~    (\mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} ELEM\+\_\+\+NAME = LIST-\/$>$first\+\_\+element;)}
+
+A macro to make writing \textquotesingle{}for\textquotesingle{} loops over linked lists easier 

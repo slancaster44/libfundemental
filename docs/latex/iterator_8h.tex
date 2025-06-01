@@ -1,0 +1,45 @@
+\hypertarget{iterator_8h}{}\doxysection{inc/iterator.h File Reference}
+\label{iterator_8h}\index{inc/iterator.h@{inc/iterator.h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for iterator.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{iterator_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{iterator_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{iterator_8h_aaba1789d1636ce6c6d3944286b7e34b5}\label{iterator_8h_aaba1789d1636ce6c6d3944286b7e34b5}} 
+\#define \mbox{\hyperlink{iterator_8h_aaba1789d1636ce6c6d3944286b7e34b5}{IT\+\_\+\+OPAQUE\+\_\+\+DATA\+\_\+\+SIZE}}~32
+\begin{DoxyCompactList}\small\item\em The maximum size of an iterator\textquotesingle{}s opaque data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{iterator_8h_abdc584230dfd7b4150035196649c6c7c}\label{iterator_8h_abdc584230dfd7b4150035196649c6c7c}} 
+typedef void($\ast$ {\bfseries Iterator\+Move\+\_\+t}) (void $\ast$opaque)
+\item 
+\mbox{\Hypertarget{iterator_8h_a8622462a6e018ebf9b8d0bc6fca53038}\label{iterator_8h_a8622462a6e018ebf9b8d0bc6fca53038}} 
+typedef bool($\ast$ {\bfseries Iterator\+Done\+\_\+t}) (void $\ast$opaque)
+\item 
+\mbox{\Hypertarget{iterator_8h_a9b887fd94e5c8b3e5f0df94c526a479b}\label{iterator_8h_a9b887fd94e5c8b3e5f0df94c526a479b}} 
+typedef void $\ast$($\ast$ {\bfseries Iterator\+Item\+\_\+t}) (void $\ast$opaque)
+\item 
+\mbox{\Hypertarget{iterator_8h_a296c5490b274f955f0b4a137817c36e2}\label{iterator_8h_a296c5490b274f955f0b4a137817c36e2}} 
+typedef struct \+\_\+iterator\+\_\+s {\bfseries Iterator\+\_\+t}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An implementation of the iterator pattern for the various collection objects in this library 

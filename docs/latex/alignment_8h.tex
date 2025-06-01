@@ -1,0 +1,76 @@
+\hypertarget{alignment_8h}{}\doxysection{inc/alignment.h File Reference}
+\label{alignment_8h}\index{inc/alignment.h@{inc/alignment.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for alignment.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{alignment_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{alignment_8h_a7e861320e06a735440c52a7587d748c9}{MACHINE\+\_\+\+ALIGNMENT}}~\+\_\+\+\_\+\+BIGGEST\+\_\+\+ALIGNMENT\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{alignment_8h_a7eebb925da4066d4ec1faa6257b6da8f}{ATTRIBUTE\+\_\+\+ALIGNED}}~\+\_\+\+\_\+attribute\+\_\+\+\_\+((aligned(\+\_\+\+\_\+\+BIGGEST\+\_\+\+ALIGNMENT\+\_\+\+\_\+)))
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{alignment_8h_af1301cb6d7d07045b3267d0941673ad3}{Align\+Integer}} (uint64\+\_\+t offset, uint64\+\_\+t alignment)
+\item 
+void $\ast$ \mbox{\hyperlink{alignment_8h_a0ec093e549036fb9dd3929c6b38e05b9}{Align\+Pointer}} (void $\ast$ptr, uint64\+\_\+t alignment)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Memory alignment utilities 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{alignment_8h_a7eebb925da4066d4ec1faa6257b6da8f}\label{alignment_8h_a7eebb925da4066d4ec1faa6257b6da8f}} 
+\index{alignment.h@{alignment.h}!ATTRIBUTE\_ALIGNED@{ATTRIBUTE\_ALIGNED}}
+\index{ATTRIBUTE\_ALIGNED@{ATTRIBUTE\_ALIGNED}!alignment.h@{alignment.h}}
+\doxysubsubsection{\texorpdfstring{ATTRIBUTE\_ALIGNED}{ATTRIBUTE\_ALIGNED}}
+{\footnotesize\ttfamily \#define ATTRIBUTE\+\_\+\+ALIGNED~\+\_\+\+\_\+attribute\+\_\+\+\_\+((aligned(\+\_\+\+\_\+\+BIGGEST\+\_\+\+ALIGNMENT\+\_\+\+\_\+)))}
+
+An attribute to tell the compiler to properly align a data type \mbox{\Hypertarget{alignment_8h_a7e861320e06a735440c52a7587d748c9}\label{alignment_8h_a7e861320e06a735440c52a7587d748c9}} 
+\index{alignment.h@{alignment.h}!MACHINE\_ALIGNMENT@{MACHINE\_ALIGNMENT}}
+\index{MACHINE\_ALIGNMENT@{MACHINE\_ALIGNMENT}!alignment.h@{alignment.h}}
+\doxysubsubsection{\texorpdfstring{MACHINE\_ALIGNMENT}{MACHINE\_ALIGNMENT}}
+{\footnotesize\ttfamily \#define MACHINE\+\_\+\+ALIGNMENT~\+\_\+\+\_\+\+BIGGEST\+\_\+\+ALIGNMENT\+\_\+\+\_\+}
+
+The size, in bytes, of the largest alignment of the machine. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{alignment_8h_af1301cb6d7d07045b3267d0941673ad3}\label{alignment_8h_af1301cb6d7d07045b3267d0941673ad3}} 
+\index{alignment.h@{alignment.h}!AlignInteger@{AlignInteger}}
+\index{AlignInteger@{AlignInteger}!alignment.h@{alignment.h}}
+\doxysubsubsection{\texorpdfstring{AlignInteger()}{AlignInteger()}}
+{\footnotesize\ttfamily uint64\+\_\+t Align\+Integer (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{offset,  }\item[{uint64\+\_\+t}]{alignment }\end{DoxyParamCaption})}
+
+Return \textquotesingle{}offset\textquotesingle{} incremented by the amount required to align \textquotesingle{}offset\textquotesingle{} to the byte boundary \textquotesingle{}alignment\textquotesingle{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & the offset to align \\
+\hline
+{\em alignment} & the byte-\/boundary to align to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{alignment_8h_a0ec093e549036fb9dd3929c6b38e05b9}\label{alignment_8h_a0ec093e549036fb9dd3929c6b38e05b9}} 
+\index{alignment.h@{alignment.h}!AlignPointer@{AlignPointer}}
+\index{AlignPointer@{AlignPointer}!alignment.h@{alignment.h}}
+\doxysubsubsection{\texorpdfstring{AlignPointer()}{AlignPointer()}}
+{\footnotesize\ttfamily void$\ast$ Align\+Pointer (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{uint64\+\_\+t}]{alignment }\end{DoxyParamCaption})}
+
+Return \textquotesingle{}ptr\textquotesingle{} incremented by the amount required to align \textquotesingle{}ptr\textquotesingle{} to the byte boundary \textquotesingle{}alignment\textquotesingle{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & the void pointer to align \\
+\hline
+{\em alignment} & the byte-\/boundary to align to \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,118 @@
+\hypertarget{classMap__t}{}\doxysection{Map\+\_\+t Class Reference}
+\label{classMap__t}\index{Map\_t@{Map\_t}}
+
+
+A key-\/value store implemented using a binary tree.  
+
+
+
+
+{\ttfamily \#include $<$binary\+\_\+map.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMapNode__t}{Map\+Node\+\_\+t}} $\ast$ \mbox{\hyperlink{classMap__t_ab1161c11bd3c19ba4d88d36d5383f9b0}{Lookup\+Map\+Node}} (\mbox{\hyperlink{classMap__t}{Map\+\_\+t}} $\ast$map, \mbox{\hyperlink{classMapKey__t}{Map\+Key\+\_\+t}} key)
+\begin{DoxyCompactList}\small\item\em Lookup a node in a map by its key. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{classMap__t_af114de6d38fdbcd6cb661913f3d4ad8c}{Lookup\+Map\+Value}} (\mbox{\hyperlink{classMap__t}{Map\+\_\+t}} $\ast$map, \mbox{\hyperlink{classMapKey__t}{Map\+Key\+\_\+t}} key)
+\begin{DoxyCompactList}\small\item\em Lookup a value in a map by its key. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMap__t_aca9c1eb05abc0a041cce76b5be281549}{Exists\+In\+Map}} (\mbox{\hyperlink{classMap__t}{Map\+\_\+t}} $\ast$map, \mbox{\hyperlink{classMapKey__t}{Map\+Key\+\_\+t}} key)
+\begin{DoxyCompactList}\small\item\em Returns \textquotesingle{}true\textquotesingle{} if a key exists in a map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMap__t_aecadf92b16ed4c3a4e7252e118bbbad3}{Insert\+Map\+Node}} (\mbox{\hyperlink{classMap__t}{Map\+\_\+t}} $\ast$map, \mbox{\hyperlink{classMapNode__t}{Map\+Node\+\_\+t}} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Insert a node into a map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMap__t_a2516b74597149dd577e6b18c0e702ffe}{Balance\+Map}} (\mbox{\hyperlink{classMap__t}{Map\+\_\+t}} $\ast$map)
+\begin{DoxyCompactList}\small\item\em Balance the map\textquotesingle{}s internal binary tree so that searches take O(log(n)) time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A key-\/value store implemented using a binary tree. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMap__t_a2516b74597149dd577e6b18c0e702ffe}\label{classMap__t_a2516b74597149dd577e6b18c0e702ffe}} 
+\index{Map\_t@{Map\_t}!BalanceMap@{BalanceMap}}
+\index{BalanceMap@{BalanceMap}!Map\_t@{Map\_t}}
+\doxysubsubsection{\texorpdfstring{BalanceMap()}{BalanceMap()}}
+{\footnotesize\ttfamily void Balance\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMap__t}{Map\+\_\+t}} $\ast$}]{map }\end{DoxyParamCaption})}
+
+
+
+Balance the map\textquotesingle{}s internal binary tree so that searches take O(log(n)) time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & The map to balance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMap__t_aca9c1eb05abc0a041cce76b5be281549}\label{classMap__t_aca9c1eb05abc0a041cce76b5be281549}} 
+\index{Map\_t@{Map\_t}!ExistsInMap@{ExistsInMap}}
+\index{ExistsInMap@{ExistsInMap}!Map\_t@{Map\_t}}
+\doxysubsubsection{\texorpdfstring{ExistsInMap()}{ExistsInMap()}}
+{\footnotesize\ttfamily bool Exists\+In\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMap__t}{Map\+\_\+t}} $\ast$}]{map,  }\item[{\mbox{\hyperlink{classMapKey__t}{Map\+Key\+\_\+t}}}]{key }\end{DoxyParamCaption})}
+
+
+
+Returns \textquotesingle{}true\textquotesingle{} if a key exists in a map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & The map to search \\
+\hline
+{\em key} & The key to search for \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMap__t_aecadf92b16ed4c3a4e7252e118bbbad3}\label{classMap__t_aecadf92b16ed4c3a4e7252e118bbbad3}} 
+\index{Map\_t@{Map\_t}!InsertMapNode@{InsertMapNode}}
+\index{InsertMapNode@{InsertMapNode}!Map\_t@{Map\_t}}
+\doxysubsubsection{\texorpdfstring{InsertMapNode()}{InsertMapNode()}}
+{\footnotesize\ttfamily void Insert\+Map\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMap__t}{Map\+\_\+t}} $\ast$}]{map,  }\item[{\mbox{\hyperlink{classMapNode__t}{Map\+Node\+\_\+t}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Insert a node into a map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & The map to modify \\
+\hline
+{\em node} & The node to insert \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMap__t_ab1161c11bd3c19ba4d88d36d5383f9b0}\label{classMap__t_ab1161c11bd3c19ba4d88d36d5383f9b0}} 
+\index{Map\_t@{Map\_t}!LookupMapNode@{LookupMapNode}}
+\index{LookupMapNode@{LookupMapNode}!Map\_t@{Map\_t}}
+\doxysubsubsection{\texorpdfstring{LookupMapNode()}{LookupMapNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMapNode__t}{Map\+Node\+\_\+t}} $\ast$ Lookup\+Map\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMap__t}{Map\+\_\+t}} $\ast$}]{map,  }\item[{\mbox{\hyperlink{classMapKey__t}{Map\+Key\+\_\+t}}}]{key }\end{DoxyParamCaption})}
+
+
+
+Lookup a node in a map by its key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & The map to search \\
+\hline
+{\em key} & The key to search for \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMap__t_af114de6d38fdbcd6cb661913f3d4ad8c}\label{classMap__t_af114de6d38fdbcd6cb661913f3d4ad8c}} 
+\index{Map\_t@{Map\_t}!LookupMapValue@{LookupMapValue}}
+\index{LookupMapValue@{LookupMapValue}!Map\_t@{Map\_t}}
+\doxysubsubsection{\texorpdfstring{LookupMapValue()}{LookupMapValue()}}
+{\footnotesize\ttfamily void $\ast$ Lookup\+Map\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMap__t}{Map\+\_\+t}} $\ast$}]{map,  }\item[{\mbox{\hyperlink{classMapKey__t}{Map\+Key\+\_\+t}}}]{key }\end{DoxyParamCaption})}
+
+
+
+Lookup a value in a map by its key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & The map to search \\
+\hline
+{\em key} & The key to search for \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{binary__map_8h}{binary\+\_\+map.\+h}}\end{DoxyCompactItemize}
