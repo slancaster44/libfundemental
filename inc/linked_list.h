@@ -33,13 +33,13 @@ typedef struct _list_node_s
      * @memberof ListNode_t
      * @brief The length of the data element
      */
-    uint64_t length;
+    Unsigned_t length;
 
     /**
      * @memberof ListNode_t
      * @brief The data stored in this node
      */
-    uint8_t data[];
+    Byte_t data[];
 } ListNode_t;
 
 /**
@@ -74,7 +74,7 @@ typedef struct _list_s
  * @param length The length of the data section. The total size of the
  * node can be given by the LIST_NODE_SIZE macro
  */
-ListNode_t *NewListNode(Arena_t *arena, void *data, uint64_t length);
+ListNode_t *NewListNode(Arena_t *arena, void *data, Unsigned_t length);
 
 /**
  * @public @memberof ListNode_t
@@ -126,7 +126,7 @@ ListNode_t *ListRemoveFront(List_t *list);
  *
  * @param list The list to get the length of
  */
-uint64_t ListLength(List_t *list);
+Unsigned_t ListLength(List_t *list);
 
 /**
  * @public @memberof List_t
@@ -135,7 +135,7 @@ uint64_t ListLength(List_t *list);
  * @param list The list to index
  * @param idx The index
  */
-ListNode_t *ListIndex(List_t *list, uint64_t idx);
+ListNode_t *ListIndex(List_t *list, Unsigned_t idx);
 
 /**
  * @public @memberof List_t

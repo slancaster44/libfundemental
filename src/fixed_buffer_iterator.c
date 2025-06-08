@@ -3,7 +3,7 @@
 typedef struct _fixed_buffer_it_s
 {
     Buffer_t *buffer;
-    uint64_t cur_idx;
+    Unsigned_t cur_idx;
 } BufferItOpaque_t;
 
 _Static_assert(sizeof(BufferItOpaque_t) <= IT_OPAQUE_DATA_SIZE, "Buffer iterator opaque size too large");

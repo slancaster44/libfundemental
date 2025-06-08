@@ -6,7 +6,7 @@
  * Memory alignment utilities
  */
 
-#include <stdint.h>
+#include "basic_types.h"
 
 /**
  * @def MACHINE_ALIGNMENT
@@ -28,7 +28,7 @@
  * @param offset the offset to align
  * @param alignment the byte-boundary to align to
  */
-uint64_t AlignInteger(uint64_t offset, uint64_t alignment);
+Unsigned_t AlignInteger(Unsigned_t offset, Unsigned_t alignment);
 
 /**
  * Return 'ptr' incremented by the amount required to
@@ -37,6 +37,6 @@ uint64_t AlignInteger(uint64_t offset, uint64_t alignment);
  * @param ptr the void pointer to align
  * @param alignment the byte-boundary to align to
  */
-void *AlignPointer(void *ptr, uint64_t alignment);
+void *AlignPointer(void *ptr, Unsigned_t alignment);
 
 #endif

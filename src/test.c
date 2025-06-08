@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
+#include "basic_types.h"
 #include "alignment.h"
 #include "arena.h"
 #include "fixed_buffer.h"
@@ -88,27 +89,27 @@ int TestArena()
     return 0;
 }
 
-uint64_t TestBuffer()
+Unsigned_t TestBuffer()
 {
     Arena_t a;
     ConstructArena(&a);
 
-    Buffer_t *buff = NewBuffer(&a, sizeof(uint64_t), 100);
-    for (uint64_t i = 0; i < 100; i++)
+    Buffer_t *buff = NewBuffer(&a, sizeof(Unsigned_t), 100);
+    for (Unsigned_t i = 0; i < 100; i++)
     {
         BufferInsert(buff, i, &i);
     }
 
-    for (uint64_t i = 0; i < 100; i++)
+    for (Unsigned_t i = 0; i < 100; i++)
     {
-        if ((*(uint64_t *)BufferIndex(buff, i)) != i)
+        if ((*(Unsigned_t *)BufferIndex(buff, i)) != i)
         {
             return i;
         }
     }
 
     Buffer_t *buff2 = BufferClone(buff, &a);
-    for (uint64_t i = 0; i < 100; i++)
+    for (Unsigned_t i = 0; i < 100; i++)
     {
         if (BufferIndex(buff, i) != BufferIndex(buff2, i))
         {
@@ -116,10 +117,10 @@ uint64_t TestBuffer()
         }
     }
 
-    uint64_t i = 0;
+    Unsigned_t i = 0;
     for (Iterator_t it = NewBufferIterator(buff2); !IteratorDone(&it); IteratorNext(&it))
     {
-        uint64_t *j = IteratorItem(&it);
+        Unsigned_t *j = IteratorItem(&it);
         if (*j != i)
         {
             return i;
@@ -132,7 +133,7 @@ uint64_t TestBuffer()
     return 0;
 }
 
-uint64_t TestList()
+Unsigned_t TestList()
 {
     Arena_t a;
     ConstructArena(&a);
@@ -140,19 +141,19 @@ uint64_t TestList()
     List_t list = {NULL};
     TEST(ListLength(&list) == 0, "Empty list length");
 
-    for (uint64_t i = 1; i < 100; i++)
+    for (Unsigned_t i = 1; i < 100; i++)
     {
-        ListNode_t *ln = NewListNode(&a, &i, sizeof(uint64_t));
+        ListNode_t *ln = NewListNode(&a, &i, sizeof(Unsigned_t));
         ListInsertBack(&list, ln);
     }
 
     TEST(ListLength(&list) == 99, "Filled out list length");
 
-    uint64_t i = 1;
+    Unsigned_t i = 1;
     ListNode_t *curr = list.first_element;
     do
     {
-        if ((*(uint64_t *)curr->data) != i)
+        if ((*(Unsigned_t *)curr->data) != i)
         {
             return i;
         }
@@ -165,7 +166,7 @@ uint64_t TestList()
     curr = list.first_element->previous;
     do
     {
-        if ((*(uint64_t *)curr->data) != i)
+        if ((*(Unsigned_t *)curr->data) != i)
         {
             return i;
         }
@@ -174,10 +175,10 @@ uint64_t TestList()
         curr = curr->next;
     } while (curr != list.first_element);
 
-    for (uint64_t i = 99; i > 1; i--)
+    for (Unsigned_t i = 99; i > 1; i--)
     {
         curr = ListRemoveBack(&list);
-        if ((*(uint64_t *)curr->data) != i)
+        if ((*(Unsigned_t *)curr->data) != i)
         {
             return i;
         }
@@ -193,16 +194,16 @@ uint64_t TestList()
 
     // List Front
 
-    for (uint64_t i = 1; i < 100; i++)
+    for (Unsigned_t i = 1; i < 100; i++)
     {
-        ListNode_t *ln = NewListNode(&a, &i, sizeof(uint64_t));
+        ListNode_t *ln = NewListNode(&a, &i, sizeof(Unsigned_t));
         ListInsertFront(&list, ln);
     }
 
     i = 99;
     for (Iterator_t it = NewListIterator(&list); !IteratorDone(&it); IteratorNext(&it))
     {
-        uint64_t *cur_num = IteratorItem(&it);
+        Unsigned_t *cur_num = IteratorItem(&it);
 
         if (*cur_num != i)
         {
@@ -216,7 +217,7 @@ uint64_t TestList()
     curr = list.first_element;
     do
     {
-        if ((*(uint64_t *)curr->data) != i)
+        if ((*(Unsigned_t *)curr->data) != i)
         {
             return i;
         }
@@ -231,7 +232,7 @@ uint64_t TestList()
 
     for (; !IteratorDone(&it); IteratorPrevious(&it))
     {
-        uint64_t *cur_num = IteratorItem(&it);
+        Unsigned_t *cur_num = IteratorItem(&it);
         if (*cur_num != i)
         {
             return i;
@@ -244,7 +245,7 @@ uint64_t TestList()
     curr = list.first_element->previous;
     do
     {
-        if ((*(uint64_t *)curr->data) != i)
+        if ((*(Unsigned_t *)curr->data) != i)
         {
             return i;
         }
@@ -253,10 +254,10 @@ uint64_t TestList()
         curr = curr->next;
     } while (curr != list.first_element);
 
-    for (uint64_t i = 99; i > 1; i--)
+    for (Unsigned_t i = 99; i > 1; i--)
     {
         curr = ListRemoveFront(&list);
-        if ((*(uint64_t *)curr->data) != i)
+        if ((*(Unsigned_t *)curr->data) != i)
         {
             return i;
         }
@@ -298,11 +299,11 @@ int test_map()
     ConstructArena(&arena);
 
     Map_t map = {NULL};
-    for (uint64_t i = 44; i < 150; i++)
+    for (Unsigned_t i = 44; i < 150; i++)
     {
-        uint64_t i_plus_one = ((i * 2) + 1) % 100;
-        InsertMapNode(&map, NewMapNode(&arena, i_plus_one, &i_plus_one, sizeof(uint64_t)));
-        InsertMapNode(&map, NewMapNode(&arena, i, &i, sizeof(uint64_t)));
+        Unsigned_t i_plus_one = ((i * 2) + 1) % 100;
+        InsertMapNode(&map, NewMapNode(&arena, i_plus_one, &i_plus_one, sizeof(Unsigned_t)));
+        InsertMapNode(&map, NewMapNode(&arena, i, &i, sizeof(Unsigned_t)));
 
         if (check_parent_consistency(map.root) != 0)
         {
@@ -311,11 +312,11 @@ int test_map()
     }
 
     Map_t map_two = {NULL};
-    for (uint64_t i = 0; i < 200; i++)
+    for (Unsigned_t i = 0; i < 200; i++)
     {
-        uint64_t i_plus_one = (((i * 2) + 1) + 100) % 200;
-        InsertMapNode(&map_two, NewMapNode(&arena, i_plus_one, &i_plus_one, sizeof(uint64_t)));
-        InsertMapNode(&map_two, NewMapNode(&arena, i, &i, sizeof(uint64_t)));
+        Unsigned_t i_plus_one = (((i * 2) + 1) + 100) % 200;
+        InsertMapNode(&map_two, NewMapNode(&arena, i_plus_one, &i_plus_one, sizeof(Unsigned_t)));
+        InsertMapNode(&map_two, NewMapNode(&arena, i, &i, sizeof(Unsigned_t)));
 
         if (check_parent_consistency(map.root) != 0)
         {
@@ -331,7 +332,7 @@ int test_map()
         return 1;
     }
 
-    for (uint64_t i = 0; i < 200; i++)
+    for (Unsigned_t i = 0; i < 200; i++)
     {
         MapNode_t *node = LookupMapNode(&map, i);
         int *num_ptr = (int *)node->value;
@@ -342,10 +343,20 @@ int test_map()
         }
     }
 
-    uint64_t key_sum = 0;
+    Unsigned_t key_sum = 0;
     for (Iterator_t it = NewMapKeyIterator(&map); !IteratorDone(&it); IteratorNext(&it))
     {
-        key_sum += (*(uint64_t*) IteratorItem(&it));
+        key_sum += (*(Unsigned_t*) IteratorItem(&it));
+    }
+
+    if (map.root->right->left == NULL)
+    {
+        return 2;
+    }
+
+    if (check_parent_consistency(map.root) != 0)
+    {
+        return 1;
     }
 
     DeconstructArena(&arena);

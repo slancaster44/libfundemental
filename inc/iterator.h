@@ -10,7 +10,7 @@
  */
 
 #include <stdbool.h>
-#include <stdint.h>
+#include "basic_types.h"
 
 typedef void (*IteratorMove_t)(void *opaque);
 typedef bool (*IteratorDone_t)(void *opaque);
@@ -36,7 +36,7 @@ typedef void *(*IteratorItem_t)(void *opaque);
  * @code
  *  for (Iterator_t it = NewBufferIterator(buffer); !IteratorDone(&it); IteratorNext(&it))
  *  {
- *      uint64_t *my_number_ptr = IteratorItem(&it);
+ *      Unsigned_t *my_number_ptr = IteratorItem(&it);
  *  }
  * @endcode
  */
@@ -46,7 +46,7 @@ typedef struct _iterator_s
     IteratorMove_t prev;
     IteratorDone_t done;
     IteratorItem_t item;
-    uint8_t opaque_data[IT_OPAQUE_DATA_SIZE];
+    Byte_t opaque_data[IT_OPAQUE_DATA_SIZE];
 } Iterator_t;
 
 /**

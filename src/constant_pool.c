@@ -8,16 +8,16 @@ ConstantPool_t *NewConstantPool(Arena_t *a)
     return pool;
 }
 
-ConstantObject_t *NewConstant(ConstantPool_t *pool, void *value, uint64_t length)
+ConstantObject_t *NewConstant(ConstantPool_t *pool, void *value, Unsigned_t length)
 {
     if (length == 0)
     {
         return NULL;
     }
 
-    uint8_t *buff = ((uint8_t *)value);
-    uint64_t bucket_hash = RawBufferHash(buff, length);
-    uint64_t bucket_idx = bucket_hash % NUM_INTERN_BUCKETS;
+    Byte_t *buff = ((Byte_t *)value);
+    Unsigned_t bucket_hash = RawBufferHash(buff, length);
+    Unsigned_t bucket_idx = bucket_hash % NUM_INTERN_BUCKETS;
 
     ListNode_t **b;
     for (b = &(pool->buckets[bucket_idx].first_element); *b != NULL; b = &((*b)->next))
@@ -29,7 +29,7 @@ ConstantObject_t *NewConstant(ConstantPool_t *pool, void *value, uint64_t length
         }
 
         /* If we've seen this string before, return original copy */
-        uint64_t i;
+        Unsigned_t i;
         for (i = 0; i < length; i++)
         {
             if (stored_obj->value[i] != buff[i])

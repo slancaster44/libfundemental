@@ -92,6 +92,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2516b74597149dd577e6b18c0e702ffe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMap__t.html#a2516b74597149dd577e6b18c0e702ffe">BalanceMap</a> (<a class="el" href="classMap__t.html">Map_t</a> *map)</td></tr>
 <tr class="memdesc:a2516b74597149dd577e6b18c0e702ffe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Balance the map's internal binary tree so that searches take O(log(n)) time.  <a href="classMap__t.html#a2516b74597149dd577e6b18c0e702ffe">More...</a><br /></td></tr>
 <tr class="separator:a2516b74597149dd577e6b18c0e702ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33b0e43e193494e32a0c0b70d815d576"><td class="memItemLeft" align="right" valign="top">Unsigned_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMap__t.html#a33b0e43e193494e32a0c0b70d815d576">FlattenMap</a> (<a class="el" href="classMap__t.html">Map_t</a> *map)</td></tr>
+<tr class="memdesc:a33b0e43e193494e32a0c0b70d815d576"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flatten the map so all nodes can be found by following node-&gt;right.  <a href="classMap__t.html#a33b0e43e193494e32a0c0b70d815d576">More...</a><br /></td></tr>
+<tr class="separator:a33b0e43e193494e32a0c0b70d815d576"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68014d6aecaf47f331553715340bb8cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIterator__t.html">Iterator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMap__t.html#a68014d6aecaf47f331553715340bb8cf">NewMapKeyIterator</a> (<a class="el" href="classMap__t.html">Map_t</a> *map)</td></tr>
+<tr class="memdesc:a68014d6aecaf47f331553715340bb8cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an iterator over the keys in a map.  <a href="classMap__t.html#a68014d6aecaf47f331553715340bb8cf">More...</a><br /></td></tr>
+<tr class="separator:a68014d6aecaf47f331553715340bb8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53cd5d267d36919d1fe62d00757bf2c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIterator__t.html">Iterator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMap__t.html#a53cd5d267d36919d1fe62d00757bf2c4">NewMapValueIterator</a> (<a class="el" href="classMap__t.html">Map_t</a> *map)</td></tr>
+<tr class="memdesc:a53cd5d267d36919d1fe62d00757bf2c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an iterator over the values in a map.  <a href="classMap__t.html#a53cd5d267d36919d1fe62d00757bf2c4">More...</a><br /></td></tr>
+<tr class="separator:a53cd5d267d36919d1fe62d00757bf2c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A key-value store implemented using a binary tree. </p>
@@ -153,6 +162,32 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">map</td><td>The map to search </td></tr>
     <tr><td class="paramname">key</td><td>The key to search for </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a33b0e43e193494e32a0c0b70d815d576"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33b0e43e193494e32a0c0b70d815d576">&#9670;&nbsp;</a></span>FlattenMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Unsigned_t FlattenMap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMap__t.html">Map_t</a> *&#160;</td>
+          <td class="paramname"><em>map</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flatten the map so all nodes can be found by following node-&gt;right. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">map</td><td>The map to flatten </td></tr>
   </table>
   </dd>
 </dl>
@@ -264,6 +299,58 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">map</td><td>The map to search </td></tr>
     <tr><td class="paramname">key</td><td>The key to search for </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a68014d6aecaf47f331553715340bb8cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68014d6aecaf47f331553715340bb8cf">&#9670;&nbsp;</a></span>NewMapKeyIterator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classIterator__t.html">Iterator_t</a> NewMapKeyIterator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMap__t.html">Map_t</a> *&#160;</td>
+          <td class="paramname"><em>map</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create an iterator over the keys in a map. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">map</td><td>The map to create an iterator for </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a53cd5d267d36919d1fe62d00757bf2c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53cd5d267d36919d1fe62d00757bf2c4">&#9670;&nbsp;</a></span>NewMapValueIterator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classIterator__t.html">Iterator_t</a> NewMapValueIterator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMap__t.html">Map_t</a> *&#160;</td>
+          <td class="paramname"><em>map</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create an iterator over the values in a map. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">map</td><td>The map to create an iterator for </td></tr>
   </table>
   </dd>
 </dl>

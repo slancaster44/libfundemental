@@ -25,11 +25,13 @@ void $\ast$ \mbox{\hyperlink{classIterator__t_a7a021c360403709fbb7ab6d6b8ae1f81}
 \doxysubsection{Detailed Description}
 The iterator object. Used for looping over a collection objects (eg \mbox{\hyperlink{classList__t}{List\+\_\+t}}, \mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}}). 
 
+It is strongly recommended that data structions not be modified while they are being iterated over.
+
 Example usage on a buffer of integers\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\mbox{\hyperlink{classIterator__t}{Iterator\_t}} it = NewBufferIterator(buffer); !\mbox{\hyperlink{classIterator__t_aa73158a3c8e7585d737ead31a41f8361}{IteratorDone}}(\&it); \mbox{\hyperlink{classIterator__t_a70e52dc1dc137adbd9192d3ed51f02ac}{IteratorNext}}(\&it))}
 \DoxyCodeLine{\{}
-\DoxyCodeLine{    uint64\_t *my\_number\_ptr = \mbox{\hyperlink{classIterator__t_a7a021c360403709fbb7ab6d6b8ae1f81}{IteratorItem}}(\&it);}
+\DoxyCodeLine{    Unsigned\_t *my\_number\_ptr = \mbox{\hyperlink{classIterator__t_a7a021c360403709fbb7ab6d6b8ae1f81}{IteratorItem}}(\&it);}
 \DoxyCodeLine{\}}
 
 \end{DoxyCode}

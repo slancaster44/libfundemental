@@ -82,13 +82,14 @@ Include dependency graph for fixed_buffer.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="fixed__buffer_8h__incl.png" border="0" usemap="#ainc_2fixed__buffer_8h" alt=""/></div>
 <map name="ainc_2fixed__buffer_8h" id="ainc_2fixed__buffer_8h">
-<area shape="rect" title=" " alt="" coords="125,5,257,32"/>
-<area shape="rect" href="arena_8h.html" title=" " alt="" coords="55,80,126,107"/>
-<area shape="rect" href="iterator_8h.html" title=" " alt="" coords="150,80,231,107"/>
-<area shape="rect" title=" " alt="" coords="255,80,326,107"/>
-<area shape="rect" title=" " alt="" coords="105,155,175,181"/>
-<area shape="rect" title=" " alt="" coords="5,155,80,181"/>
-<area shape="rect" title=" " alt="" coords="200,155,283,181"/>
+<area shape="rect" title=" " alt="" coords="127,5,259,32"/>
+<area shape="rect" href="arena_8h.html" title=" " alt="" coords="58,80,129,107"/>
+<area shape="rect" href="iterator_8h.html" title=" " alt="" coords="153,80,234,107"/>
+<area shape="rect" title=" " alt="" coords="258,80,329,107"/>
+<area shape="rect" href="basic__types_8h_source.html" title=" " alt="" coords="97,155,207,181"/>
+<area shape="rect" title=" " alt="" coords="5,229,80,256"/>
+<area shape="rect" title=" " alt="" coords="224,229,307,256"/>
+<area shape="rect" title=" " alt="" coords="104,229,200,256"/>
 </map>
 </div>
 </div>
@@ -96,7 +97,7 @@ Include dependency graph for fixed_buffer.h:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a5a93f43a9d79a6808748cfd443364b33"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fixed__buffer_8h.html#a5a93f43a9d79a6808748cfd443364b33">TOTAL_BUFFER_SIZE</a>(BUFF)&#160;&#160;&#160;((BUFF-&gt;<a class="el" href="classMapNode__t.html#a190b76b1f3d5bd26920300e5f073739b">length</a> * BUFF-&gt;<a class="el" href="classBuffer__t.html#a79ee8ab81474571545728b9e3b6426dc">data_width</a>) + sizeof(<a class="el" href="classBuffer__t.html">Buffer_t</a>))</td></tr>
+<tr class="memitem:a5a93f43a9d79a6808748cfd443364b33"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fixed__buffer_8h.html#a5a93f43a9d79a6808748cfd443364b33">TOTAL_BUFFER_SIZE</a>(BUFF)&#160;&#160;&#160;((BUFF-&gt;<a class="el" href="classMapNode__t.html#ac9ca1050caee8abc2344bfa57f7e4fb8">length</a> * BUFF-&gt;<a class="el" href="classBuffer__t.html#a879515646562c9819457967694fff4ab">data_width</a>) + sizeof(<a class="el" href="classBuffer__t.html">Buffer_t</a>))</td></tr>
 <tr class="separator:a5a93f43a9d79a6808748cfd443364b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -107,8 +108,8 @@ typedef struct _fixed_buffer_s&#160;</td><td class="memItemRight" valign="bottom
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa93fb5a320da585002c12734b6fbdbef"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fixed__buffer_8h.html#aa93fb5a320da585002c12734b6fbdbef">RawBufferHash</a> (uint8_t *buff, uint64_t <a class="el" href="classMapNode__t.html#a190b76b1f3d5bd26920300e5f073739b">length</a>)</td></tr>
-<tr class="separator:aa93fb5a320da585002c12734b6fbdbef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4a8f1309eef97be4f78d3de601d20cb"><td class="memItemLeft" align="right" valign="top">Unsigned_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fixed__buffer_8h.html#af4a8f1309eef97be4f78d3de601d20cb">RawBufferHash</a> (Byte_t *buff, Unsigned_t <a class="el" href="classMapNode__t.html#ac9ca1050caee8abc2344bfa57f7e4fb8">length</a>)</td></tr>
+<tr class="separator:af4a8f1309eef97be4f78d3de601d20cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Fixed buffer with bounds checking </p>
@@ -124,7 +125,7 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">BUFF</td><td>)</td>
-          <td>&#160;&#160;&#160;((BUFF-&gt;<a class="el" href="classMapNode__t.html#a190b76b1f3d5bd26920300e5f073739b">length</a> * BUFF-&gt;<a class="el" href="classBuffer__t.html#a79ee8ab81474571545728b9e3b6426dc">data_width</a>) + sizeof(<a class="el" href="classBuffer__t.html">Buffer_t</a>))</td>
+          <td>&#160;&#160;&#160;((BUFF-&gt;<a class="el" href="classMapNode__t.html#ac9ca1050caee8abc2344bfa57f7e4fb8">length</a> * BUFF-&gt;<a class="el" href="classBuffer__t.html#a879515646562c9819457967694fff4ab">data_width</a>) + sizeof(<a class="el" href="classBuffer__t.html">Buffer_t</a>))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -133,22 +134,22 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="aa93fb5a320da585002c12734b6fbdbef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa93fb5a320da585002c12734b6fbdbef">&#9670;&nbsp;</a></span>RawBufferHash()</h2>
+<a id="af4a8f1309eef97be4f78d3de601d20cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4a8f1309eef97be4f78d3de601d20cb">&#9670;&nbsp;</a></span>RawBufferHash()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint64_t RawBufferHash </td>
+          <td class="memname">Unsigned_t RawBufferHash </td>
           <td>(</td>
-          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramtype">Byte_t *&#160;</td>
           <td class="paramname"><em>buff</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramtype">Unsigned_t&#160;</td>
           <td class="paramname"><em>length</em>&#160;</td>
         </tr>
         <tr>

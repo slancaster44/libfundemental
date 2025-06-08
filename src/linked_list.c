@@ -3,7 +3,7 @@
 #include <string.h>
 #include <assert.h>
 
-ListNode_t *NewListNode(Arena_t *arena, void *data, uint64_t length)
+ListNode_t *NewListNode(Arena_t *arena, void *data, Unsigned_t length)
 {
     ListNode_t *new_node = ArenaAllocate(arena, length);
 
@@ -75,7 +75,7 @@ ListNode_t *ListRemoveFront(List_t *list)
     return ListRemoveBack(list);
 }
 
-uint64_t ListLength(List_t *list)
+Unsigned_t ListLength(List_t *list)
 {
     if (list->first_element == NULL)
     {
@@ -83,7 +83,7 @@ uint64_t ListLength(List_t *list)
     }
 
     ListNode_t *curr = list->first_element;
-    uint64_t count = 0;
+    Unsigned_t count = 0;
 
     do
     {
@@ -94,12 +94,12 @@ uint64_t ListLength(List_t *list)
     return count;
 }
 
-ListNode_t *ListIndex(List_t *list, uint64_t idx)
+ListNode_t *ListIndex(List_t *list, Unsigned_t idx)
 {
     assert(ListLength(list) > idx);
 
     ListNode_t *curr = list->first_element;
-    uint64_t count = 0;
+    Unsigned_t count = 0;
 
     while (count != idx)
     {

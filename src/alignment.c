@@ -1,6 +1,6 @@
 #include "alignment.h"
 
-uint64_t AlignInteger(uint64_t offset, uint64_t alignment)
+Unsigned_t AlignInteger(Unsigned_t offset, Unsigned_t alignment)
 {
     if (offset % alignment == 0)
     {
@@ -10,7 +10,7 @@ uint64_t AlignInteger(uint64_t offset, uint64_t alignment)
     return offset + alignment - (offset % alignment);
 }
 
-void *AlignPointer(void *ptr, uint64_t alignment)
+void *AlignPointer(void *ptr, Unsigned_t alignment)
 {
-    return (void *)AlignInteger((uint64_t)ptr, alignment);
+    return (void *)AlignInteger((Unsigned_t)ptr, alignment);
 }

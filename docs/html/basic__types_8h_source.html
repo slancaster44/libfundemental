@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Libfundemental: Member List</title>
+<title>Libfundemental: inc/basic_types.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -60,24 +60,30 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">MapNode_t Member List</div>  </div>
+<div class="title">basic_types.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>This is the complete list of members for <a class="el" href="classMapNode__t.html">MapNode_t</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classMapNode__t.html#a232b1f114ebd3a213ce68b6236ac8abd">key</a></td><td class="entry"><a class="el" href="classMapNode__t.html">MapNode_t</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classMapNode__t.html#ae2898bf215c1d51a79b9b047d55a5095">left</a></td><td class="entry"><a class="el" href="classMapNode__t.html">MapNode_t</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classMapNode__t.html#ac9ca1050caee8abc2344bfa57f7e4fb8">length</a></td><td class="entry"><a class="el" href="classMapNode__t.html">MapNode_t</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classMapNode__t.html#a068a17251cb472a60f3994217e8e4370">NewMapNode</a>(Arena_t *arena, MapKey_t key, void *value, Unsigned_t length)</td><td class="entry"><a class="el" href="classMapNode__t.html">MapNode_t</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classMapNode__t.html#a746e2e573d58129433271568e04feb74">parent</a></td><td class="entry"><a class="el" href="classMapNode__t.html">MapNode_t</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classMapNode__t.html#a56d94e9e0dcdf9e586e710ee8f9ececd">right</a></td><td class="entry"><a class="el" href="classMapNode__t.html">MapNode_t</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classMapNode__t.html#a2eb42599867225f00220e22e8b6680d4">value</a></td><td class="entry"><a class="el" href="classMapNode__t.html">MapNode_t</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classMapNode__t.html#a160ee6f0866d4eab45fa28f2a81cdf1a">WriteMapNodeValue</a>(MapNode_t *mn, void *value, Unsigned_t length)</td><td class="entry"><a class="el" href="classMapNode__t.html">MapNode_t</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __LIB_FUNDEMENTAL_BASIC_TYPES_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __LIB_FUNDEMENTAL_BASIC_TYPES_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> Byte_t;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">size_t</span> Unsigned_t;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">typedef</span> ssize_t Signed_t;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">bool</span> Boolean_t;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1

@@ -92,9 +92,10 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The iterator object. Used for looping over a collection objects (eg <a class="el" href="classList__t.html" title="A linked list.">List_t</a>, <a class="el" href="classBuffer__t.html" title="Fixed memory buffer with bounds checking.">Buffer_t</a>). </p>
+<p>It is strongly recommended that data structions not be modified while they are being iterated over.</p>
 <p>Example usage on a buffer of integers: </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (<a class="code" href="classIterator__t.html">Iterator_t</a> it = NewBufferIterator(buffer); !<a class="code" href="classIterator__t.html#aa73158a3c8e7585d737ead31a41f8361">IteratorDone</a>(&amp;it); <a class="code" href="classIterator__t.html#a70e52dc1dc137adbd9192d3ed51f02ac">IteratorNext</a>(&amp;it))</div>
 <div class="line">{</div>
-<div class="line">    uint64_t *my_number_ptr = <a class="code" href="classIterator__t.html#a7a021c360403709fbb7ab6d6b8ae1f81">IteratorItem</a>(&amp;it);</div>
+<div class="line">    Unsigned_t *my_number_ptr = <a class="code" href="classIterator__t.html#a7a021c360403709fbb7ab6d6b8ae1f81">IteratorItem</a>(&amp;it);</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassIterator__t_html"><div class="ttname"><a href="classIterator__t.html">Iterator_t</a></div><div class="ttdoc">The iterator object. Used for looping over a collection objects (eg List_t, Buffer_t).</div></div>
 <div class="ttc" id="aclassIterator__t_html_a70e52dc1dc137adbd9192d3ed51f02ac"><div class="ttname"><a href="classIterator__t.html#a70e52dc1dc137adbd9192d3ed51f02ac">Iterator_t::IteratorNext</a></div><div class="ttdeci">void IteratorNext(Iterator_t *it)</div><div class="ttdoc">Move the iterator to the next object.</div><div class="ttdef"><b>Definition:</b> iterator.c:3</div></div>

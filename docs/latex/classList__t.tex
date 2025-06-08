@@ -20,9 +20,9 @@ void \mbox{\hyperlink{classList__t_a4a6659f11b87077d43a6d3d8381a7dcb}{List\+Inse
 \item 
 \mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} $\ast$ \mbox{\hyperlink{classList__t_a3e9b0c2773f6364d58d1ba562e9207d8}{List\+Remove\+Front}} (\mbox{\hyperlink{classList__t}{List\+\_\+t}} $\ast$list)
 \item 
-uint64\+\_\+t \mbox{\hyperlink{classList__t_a8c9674daa1a2b68fa32f5f37f561bc21}{List\+Length}} (\mbox{\hyperlink{classList__t}{List\+\_\+t}} $\ast$list)
+Unsigned\+\_\+t \mbox{\hyperlink{classList__t_a61b78631432afba413692f0a84361f6d}{List\+Length}} (\mbox{\hyperlink{classList__t}{List\+\_\+t}} $\ast$list)
 \item 
-\mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} $\ast$ \mbox{\hyperlink{classList__t_a23ade68755a3119af961bf342a49328e}{List\+Index}} (\mbox{\hyperlink{classList__t}{List\+\_\+t}} $\ast$list, uint64\+\_\+t idx)
+\mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} $\ast$ \mbox{\hyperlink{classList__t_a3b9d094c22e51891701ca490707e0602}{List\+Index}} (\mbox{\hyperlink{classList__t}{List\+\_\+t}} $\ast$list, Unsigned\+\_\+t idx)
 \item 
 \mbox{\hyperlink{classIterator__t}{Iterator\+\_\+t}} \mbox{\hyperlink{classList__t_aa979eedcd1c800ba70e2799fbbc3e3a8}{New\+List\+Iterator}} (\mbox{\hyperlink{classList__t}{List\+\_\+t}} $\ast$list)
 \begin{DoxyCompactList}\small\item\em Create an iterator over the given list. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -32,11 +32,11 @@ uint64\+\_\+t \mbox{\hyperlink{classList__t_a8c9674daa1a2b68fa32f5f37f561bc21}{L
 A linked list. 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classList__t_a23ade68755a3119af961bf342a49328e}\label{classList__t_a23ade68755a3119af961bf342a49328e}} 
+\mbox{\Hypertarget{classList__t_a3b9d094c22e51891701ca490707e0602}\label{classList__t_a3b9d094c22e51891701ca490707e0602}} 
 \index{List\_t@{List\_t}!ListIndex@{ListIndex}}
 \index{ListIndex@{ListIndex}!List\_t@{List\_t}}
 \doxysubsubsection{\texorpdfstring{ListIndex()}{ListIndex()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} $\ast$ List\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList__t}{List\+\_\+t}} $\ast$}]{list,  }\item[{uint64\+\_\+t}]{idx }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} $\ast$ List\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList__t}{List\+\_\+t}} $\ast$}]{list,  }\item[{Unsigned\+\_\+t}]{idx }\end{DoxyParamCaption})}
 
 Return the \mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} at a given index
 
@@ -77,11 +77,11 @@ Add a list element to the front of a list
 {\em new\+\_\+node} & The list node to add to the list \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classList__t_a8c9674daa1a2b68fa32f5f37f561bc21}\label{classList__t_a8c9674daa1a2b68fa32f5f37f561bc21}} 
+\mbox{\Hypertarget{classList__t_a61b78631432afba413692f0a84361f6d}\label{classList__t_a61b78631432afba413692f0a84361f6d}} 
 \index{List\_t@{List\_t}!ListLength@{ListLength}}
 \index{ListLength@{ListLength}!List\_t@{List\_t}}
 \doxysubsubsection{\texorpdfstring{ListLength()}{ListLength()}}
-{\footnotesize\ttfamily uint64\+\_\+t List\+Length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList__t}{List\+\_\+t}} $\ast$}]{list }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Unsigned\+\_\+t List\+Length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classList__t}{List\+\_\+t}} $\ast$}]{list }\end{DoxyParamCaption})}
 
 Get the number of elements in a given list
 

@@ -4,9 +4,9 @@
 #include "arena.h"
 #include "alignment.h"
 
-void init_block(ArenaBlock_t **block, uint64_t size)
+void init_block(ArenaBlock_t **block, Unsigned_t size)
 {
-    uint8_t *mem = malloc(size + sizeof(ArenaBlock_t));
+    Byte_t *mem = malloc(size + sizeof(ArenaBlock_t));
 
     for (int i = 0; i < size + sizeof(ArenaBlock_t); i++)
     {
@@ -14,8 +14,8 @@ void init_block(ArenaBlock_t **block, uint64_t size)
     }
 
     *block = (ArenaBlock_t *)mem;
-    (*block)->start = (uint8_t *)((mem) + sizeof(ArenaBlock_t));
-    (*block)->end = (uint8_t *)(*block)->start + size;
+    (*block)->start = (Byte_t *)((mem) + sizeof(ArenaBlock_t));
+    (*block)->end = (Byte_t *)(*block)->start + size;
     (*block)->next = NULL;
 }
 
@@ -35,7 +35,7 @@ void DeconstructArena(Arena_t *a)
     }
 }
 
-void *ArenaAllocate(Arena_t *a, uint64_t size)
+void *ArenaAllocate(Arena_t *a, Unsigned_t size)
 {
     if (a == &ARENA_NONE || a->blocks == ((void *)-1))
     {

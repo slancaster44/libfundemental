@@ -7,7 +7,7 @@
  * of key-value pairs
  */
 
-#include <stdint.h>
+#include "basic_types.h"
 #include <stdbool.h>
 
 #include "arena.h"
@@ -26,7 +26,7 @@ typedef union _map_key_u
      * @memberof MapKey_t
      * @brief The map key as an integer
      */
-    uint64_t as_integer;
+    Unsigned_t as_integer;
 
     /**
      * @memberof MapKey_t
@@ -78,14 +78,14 @@ typedef struct _map_node_s
      *
      * @brief The length of this map node's value
      */
-    uint64_t length;
+    Unsigned_t length;
 
     /**
      * @memberof MapNode_t
      *
      * @brief The value for this map node
      */
-    uint8_t value[];
+    Byte_t value[];
 } MapNode_t;
 
 /**
@@ -107,7 +107,7 @@ typedef struct _map_s
  * @param value The value to be stored in the node
  * @param length The length, in bytes, of the vlaue to be stored in the node
  */
-MapNode_t *NewMapNode(Arena_t *arena, MapKey_t key, void *value, uint64_t length);
+MapNode_t *NewMapNode(Arena_t *arena, MapKey_t key, void *value, Unsigned_t length);
 
 /**
  * @public @memberof MapNode_t
@@ -117,7 +117,7 @@ MapNode_t *NewMapNode(Arena_t *arena, MapKey_t key, void *value, uint64_t length
  * @param value The value to copy
  * @param length The length, in bytes, of the value
  */
-void WriteMapNodeValue(MapNode_t *mn, void *value, uint64_t length);
+void WriteMapNodeValue(MapNode_t *mn, void *value, Unsigned_t length);
 
 /**
  * @public @memberof Map_t
@@ -171,7 +171,7 @@ void BalanceMap(Map_t *map);
  * 
  * @param map The map to flatten
 */
-uint64_t FlattenMap(Map_t *map);
+Unsigned_t FlattenMap(Map_t *map);
 
 /**
  * @public @memberof Map_t

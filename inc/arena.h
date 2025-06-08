@@ -7,7 +7,7 @@
  * allocations together, so they may be free'd together
  */
 
-#include <stdint.h>
+#include "basic_types.h"
 #include <stddef.h>
 
 /**
@@ -17,8 +17,8 @@
 typedef struct _arena_block_s
 {
     struct _arena_block_s *next;
-    uint8_t *start;
-    uint8_t *end;
+    Byte_t *start;
+    Byte_t *end;
 } ArenaBlock_t;
 
 /**
@@ -94,6 +94,6 @@ void DeconstructArena(Arena_t *a);
  * @param a The arena to allocate to
  * @param size The length of the allocated buffer
  */
-void *ArenaAllocate(Arena_t *a, uint64_t size);
+void *ArenaAllocate(Arena_t *a, Unsigned_t size);
 
 #endif

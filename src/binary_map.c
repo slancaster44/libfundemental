@@ -3,7 +3,7 @@
 
 #include "binary_map.h"
 
-MapNode_t *NewMapNode(Arena_t *arena, MapKey_t key, void *value, uint64_t length)
+MapNode_t *NewMapNode(Arena_t *arena, MapKey_t key, void *value, Unsigned_t length)
 {
     MapNode_t *node = ArenaAllocate(arena, sizeof(MapNode_t) + length);
     node->key = key;
@@ -13,7 +13,7 @@ MapNode_t *NewMapNode(Arena_t *arena, MapKey_t key, void *value, uint64_t length
     return node;
 }
 
-void WriteMapNodeValue(MapNode_t *mn, void *value, uint64_t length)
+void WriteMapNodeValue(MapNode_t *mn, void *value, Unsigned_t length)
 {
     if (value == NULL || length == 0)
     {
@@ -145,7 +145,7 @@ void justify_parents(MapNode_t *root)
     justify_parents(root->right);
 }
 
-uint64_t flatten_map(MapNode_t **root)
+Unsigned_t flatten_map(MapNode_t **root)
 {
     /* 1) Convert map into a linked-list through (*root)->right */
     MapNode_t fake_root;
@@ -153,7 +153,7 @@ uint64_t flatten_map(MapNode_t **root)
 
     MapNode_t *tail = &fake_root;
     MapNode_t *remaining = *root;
-    uint64_t length = 0;
+    Unsigned_t length = 0;
     while (remaining != NULL)
     {
         if (remaining->left == NULL)
@@ -176,23 +176,23 @@ uint64_t flatten_map(MapNode_t **root)
     return length;
 }
 
-uint64_t FlattenMap(Map_t *map)
+Unsigned_t FlattenMap(Map_t *map)
 {
-    uint64_t ret_val = flatten_map(&map->root);
+    Unsigned_t ret_val = flatten_map(&map->root);
     justify_parents(map->root);
     return ret_val;
 }
 
 void balance_map(MapNode_t **root)
 {
-    uint64_t length = flatten_map(root);
+    Unsigned_t length = flatten_map(root);
 
     /* 2) Convert back into balanced tree */
     /* num_leaves = length + 1 - 2**(log2(length+1)) */
-    uint64_t n = 0;
-    for (uint64_t i = length + 1; i >>= 1; n++)
+    Unsigned_t n = 0;
+    for (Unsigned_t i = length + 1; i >>= 1; n++)
         ;
-    uint64_t num_leaves = length + 1ul - ((1ul << (n)));
+    Unsigned_t num_leaves = length + 1ul - ((1ul << (n)));
 
     compress(root, num_leaves);
     for (length -= num_leaves; length > 1; length /= 2)

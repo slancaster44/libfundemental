@@ -25,19 +25,19 @@ typedef struct _fixed_buffer_s
      * @memberof Buffer_t
      * @brief Length, in bytes, of a single data element in the buffer
      */
-    uint64_t data_width;
+    Unsigned_t data_width;
 
     /**
      * @memberof Buffer_t
      * @brief Number of data elements the buffer can contain
      */
-    uint64_t length;
+    Unsigned_t length;
 
     /**
      * @memberof Buffer_t
      * @brief Actual buffer data
      */
-    uint8_t data[];
+    Byte_t data[];
 } Buffer_t;
 
 /**
@@ -54,7 +54,7 @@ typedef struct _fixed_buffer_s
  * @param data_width The width of a single element in the new buffer
  * @param total_length The number of elements contained in the buffer
  */
-Buffer_t *NewBuffer(Arena_t *a, uint64_t data_width, uint64_t length);
+Buffer_t *NewBuffer(Arena_t *a, Unsigned_t data_width, Unsigned_t length);
 
 /**
  * @public @memberof Buffer_t
@@ -63,7 +63,7 @@ Buffer_t *NewBuffer(Arena_t *a, uint64_t data_width, uint64_t length);
  * @param b The buffer to index
  * @param idx The offset (from zero) to get the element from
  */
-void *BufferIndex(Buffer_t *b, uint64_t idx);
+void *BufferIndex(Buffer_t *b, Unsigned_t idx);
 
 /**
  * @public @memberof Buffer_t
@@ -73,7 +73,7 @@ void *BufferIndex(Buffer_t *b, uint64_t idx);
  * @param idx The index to write the element to
  * @param data A pointer to the element
  */
-void BufferInsert(Buffer_t *b, uint64_t idx, void *data);
+void BufferInsert(Buffer_t *b, Unsigned_t idx, void *data);
 
 /**
  * @public @memberof Buffer_t
@@ -83,7 +83,7 @@ void BufferInsert(Buffer_t *b, uint64_t idx, void *data);
  * @param dest The location to copy the element to
  * @param src_idx The index to copy the element from
  */
-void BufferCopyElement(Buffer_t *b, void *dest, uint64_t src_idx);
+void BufferCopyElement(Buffer_t *b, void *dest, Unsigned_t src_idx);
 
 /**
  * @public @memberof Buffer_t
@@ -100,7 +100,7 @@ Buffer_t *BufferClone(Buffer_t *b, Arena_t *a);
  *
  * @param b The buffer to hash
  */
-uint64_t BufferHash(Buffer_t *b);
+Unsigned_t BufferHash(Buffer_t *b);
 
 /**
  * Hash contents of a raw buffer using the algorithm
@@ -109,7 +109,7 @@ uint64_t BufferHash(Buffer_t *b);
  * @param buff The raw buffer to hash
  * @param length The length of the raw buffer
  */
-uint64_t RawBufferHash(uint8_t *buff, uint64_t length);
+Unsigned_t RawBufferHash(Byte_t *buff, Unsigned_t length);
 
 /**
  * @public @memberof Buffer_t

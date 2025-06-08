@@ -73,14 +73,17 @@ $(function() {
 <div class="title">alignment.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<div class="textblock"><code>#include &quot;basic_types.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for alignment.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="alignment_8h__incl.png" border="0" usemap="#ainc_2alignment_8h" alt=""/></div>
 <map name="ainc_2alignment_8h" id="ainc_2alignment_8h">
-<area shape="rect" title=" " alt="" coords="5,5,128,32"/>
-<area shape="rect" title=" " alt="" coords="31,80,102,107"/>
+<area shape="rect" title=" " alt="" coords="84,5,207,32"/>
+<area shape="rect" href="basic__types_8h_source.html" title=" " alt="" coords="90,80,201,107"/>
+<area shape="rect" title=" " alt="" coords="5,155,80,181"/>
+<area shape="rect" title=" " alt="" coords="104,155,187,181"/>
+<area shape="rect" title=" " alt="" coords="211,155,307,181"/>
 </map>
 </div>
 </div>
@@ -95,10 +98,10 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af1301cb6d7d07045b3267d0941673ad3"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="alignment_8h.html#af1301cb6d7d07045b3267d0941673ad3">AlignInteger</a> (uint64_t offset, uint64_t alignment)</td></tr>
-<tr class="separator:af1301cb6d7d07045b3267d0941673ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ec093e549036fb9dd3929c6b38e05b9"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="alignment_8h.html#a0ec093e549036fb9dd3929c6b38e05b9">AlignPointer</a> (void *ptr, uint64_t alignment)</td></tr>
-<tr class="separator:a0ec093e549036fb9dd3929c6b38e05b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e31b6f383bebb4d3cd8592c8d93dfa3"><td class="memItemLeft" align="right" valign="top">Unsigned_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="alignment_8h.html#a8e31b6f383bebb4d3cd8592c8d93dfa3">AlignInteger</a> (Unsigned_t offset, Unsigned_t alignment)</td></tr>
+<tr class="separator:a8e31b6f383bebb4d3cd8592c8d93dfa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba213acd8577acf8d9ded0810fa11a9e"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="alignment_8h.html#aba213acd8577acf8d9ded0810fa11a9e">AlignPointer</a> (void *ptr, Unsigned_t alignment)</td></tr>
+<tr class="separator:aba213acd8577acf8d9ded0810fa11a9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Memory alignment utilities </p>
@@ -134,22 +137,22 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="af1301cb6d7d07045b3267d0941673ad3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1301cb6d7d07045b3267d0941673ad3">&#9670;&nbsp;</a></span>AlignInteger()</h2>
+<a id="a8e31b6f383bebb4d3cd8592c8d93dfa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e31b6f383bebb4d3cd8592c8d93dfa3">&#9670;&nbsp;</a></span>AlignInteger()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint64_t AlignInteger </td>
+          <td class="memname">Unsigned_t AlignInteger </td>
           <td>(</td>
-          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramtype">Unsigned_t&#160;</td>
           <td class="paramname"><em>offset</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramtype">Unsigned_t&#160;</td>
           <td class="paramname"><em>alignment</em>&#160;</td>
         </tr>
         <tr>
@@ -170,8 +173,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a0ec093e549036fb9dd3929c6b38e05b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ec093e549036fb9dd3929c6b38e05b9">&#9670;&nbsp;</a></span>AlignPointer()</h2>
+<a id="aba213acd8577acf8d9ded0810fa11a9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba213acd8577acf8d9ded0810fa11a9e">&#9670;&nbsp;</a></span>AlignPointer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -185,7 +188,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramtype">Unsigned_t&#160;</td>
           <td class="paramname"><em>alignment</em>&#160;</td>
         </tr>
         <tr>

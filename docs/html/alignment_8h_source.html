@@ -73,19 +73,19 @@ $(function() {
 <a href="alignment_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __LIB_FUNDEMENTAL_ALIGNMENT_H__</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __LIB_FUNDEMENTAL_ALIGNMENT_H__</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;basic_types.h&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="alignment_8h.html#a7e861320e06a735440c52a7587d748c9">   15</a></span>&#160;<span class="preprocessor">#define MACHINE_ALIGNMENT __BIGGEST_ALIGNMENT__</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="alignment_8h.html#a7eebb925da4066d4ec1faa6257b6da8f">   22</a></span>&#160;<span class="preprocessor">#define ATTRIBUTE_ALIGNED __attribute__((aligned(__BIGGEST_ALIGNMENT__)))</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;uint64_t <a class="code" href="alignment_8h.html#af1301cb6d7d07045b3267d0941673ad3">AlignInteger</a>(uint64_t offset, uint64_t alignment);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;Unsigned_t <a class="code" href="alignment_8h.html#a8e31b6f383bebb4d3cd8592c8d93dfa3">AlignInteger</a>(Unsigned_t offset, Unsigned_t alignment);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">void</span> *<a class="code" href="alignment_8h.html#a0ec093e549036fb9dd3929c6b38e05b9">AlignPointer</a>(<span class="keywordtype">void</span> *ptr, uint64_t alignment);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">void</span> *<a class="code" href="alignment_8h.html#aba213acd8577acf8d9ded0810fa11a9e">AlignPointer</a>(<span class="keywordtype">void</span> *ptr, Unsigned_t alignment);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aalignment_8h_html_a0ec093e549036fb9dd3929c6b38e05b9"><div class="ttname"><a href="alignment_8h.html#a0ec093e549036fb9dd3929c6b38e05b9">AlignPointer</a></div><div class="ttdeci">void * AlignPointer(void *ptr, uint64_t alignment)</div><div class="ttdef"><b>Definition:</b> alignment.c:13</div></div>
-<div class="ttc" id="aalignment_8h_html_af1301cb6d7d07045b3267d0941673ad3"><div class="ttname"><a href="alignment_8h.html#af1301cb6d7d07045b3267d0941673ad3">AlignInteger</a></div><div class="ttdeci">uint64_t AlignInteger(uint64_t offset, uint64_t alignment)</div><div class="ttdef"><b>Definition:</b> alignment.c:3</div></div>
+<div class="ttc" id="aalignment_8h_html_a8e31b6f383bebb4d3cd8592c8d93dfa3"><div class="ttname"><a href="alignment_8h.html#a8e31b6f383bebb4d3cd8592c8d93dfa3">AlignInteger</a></div><div class="ttdeci">Unsigned_t AlignInteger(Unsigned_t offset, Unsigned_t alignment)</div><div class="ttdef"><b>Definition:</b> alignment.c:3</div></div>
+<div class="ttc" id="aalignment_8h_html_aba213acd8577acf8d9ded0810fa11a9e"><div class="ttname"><a href="alignment_8h.html#aba213acd8577acf8d9ded0810fa11a9e">AlignPointer</a></div><div class="ttdeci">void * AlignPointer(void *ptr, Unsigned_t alignment)</div><div class="ttdef"><b>Definition:</b> alignment.c:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

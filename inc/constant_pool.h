@@ -52,13 +52,13 @@ typedef struct _const_obj_s
      * @memberof ConstantObject_t
      * @brief A hash of the data field
      */
-    uint64_t hash;
+    Unsigned_t hash;
 
     /**
      * @memberof ConstantObject_t
      * @brief The length of the data field
      */
-    uint64_t length;
+    Unsigned_t length;
 
     /**
      * @memberof ConstantObject_t
@@ -66,7 +66,7 @@ typedef struct _const_obj_s
      *
      * This can be cast to the type originally interned
      */
-    uint8_t value[];
+    Byte_t value[];
 } ConstantObject_t;
 
 /**
@@ -88,7 +88,7 @@ ConstantPool_t *NewConstantPool(Arena_t *a);
  * @param value A pointer to the value
  * @param length The length of the value
  */
-ConstantObject_t *NewConstant(ConstantPool_t *pool, void *value, uint64_t length);
+ConstantObject_t *NewConstant(ConstantPool_t *pool, void *value, Unsigned_t length);
 
 /**
  * @public @memberof ConstantPool_t

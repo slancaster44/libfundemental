@@ -1,11 +1,12 @@
 var searchData=
 [
-  ['newbuffer_119',['NewBuffer',['../classBuffer__t.html#ae7b3cb125c217afbcae4d8609025ab27',1,'Buffer_t']]],
-  ['newbufferiterator_120',['NewBufferIterator',['../classBuffer__t.html#af5c7d288de1ecd8931b8ab20e261efa5',1,'Buffer_t']]],
-  ['newconstant_121',['NewConstant',['../classConstantPool__t.html#a27015583a09fe2e9a060c93a67c15782',1,'ConstantPool_t']]],
-  ['newconstantpool_122',['NewConstantPool',['../classConstantPool__t.html#a904840425da128d7f5437fbdf64ecd9e',1,'ConstantPool_t']]],
-  ['newlistiterator_123',['NewListIterator',['../classList__t.html#aa979eedcd1c800ba70e2799fbbc3e3a8',1,'List_t']]],
-  ['newlistnode_124',['NewListNode',['../classListNode__t.html#a497d56dc0f428b1c97262c2e165c7269',1,'ListNode_t']]],
-  ['newmapnode_125',['NewMapNode',['../classMapNode__t.html#a781786c9f1d999641a632e34a4f2a4e3',1,'MapNode_t']]],
-  ['newstring_126',['NewString',['../classConstantPool__t.html#aab15fb3bb5b4a71a2948e3d140ecceb7',1,'ConstantPool_t']]]
+  ['listindex_115',['ListIndex',['../classList__t.html#a3b9d094c22e51891701ca490707e0602',1,'List_t']]],
+  ['listinsertback_116',['ListInsertBack',['../classList__t.html#a0a5f8e1b081b877c37d2b86eb4d91d52',1,'List_t']]],
+  ['listinsertfront_117',['ListInsertFront',['../classList__t.html#a4a6659f11b87077d43a6d3d8381a7dcb',1,'List_t']]],
+  ['listlength_118',['ListLength',['../classList__t.html#a61b78631432afba413692f0a84361f6d',1,'List_t']]],
+  ['listnodewritedata_119',['ListNodeWriteData',['../classListNode__t.html#a42367671d3fc9280649336c9e5e796bc',1,'ListNode_t']]],
+  ['listremoveback_120',['ListRemoveBack',['../classList__t.html#a0b01647cd6267415410269d7951400fd',1,'List_t']]],
+  ['listremovefront_121',['ListRemoveFront',['../classList__t.html#a3e9b0c2773f6364d58d1ba562e9207d8',1,'List_t']]],
+  ['lookupmapnode_122',['LookupMapNode',['../classMap__t.html#ab1161c11bd3c19ba4d88d36d5383f9b0',1,'Map_t']]],
+  ['lookupmapvalue_123',['LookupMapValue',['../classMap__t.html#af114de6d38fdbcd6cb661913f3d4ad8c',1,'Map_t']]]
 ];

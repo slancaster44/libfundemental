@@ -8,13 +8,13 @@ Include dependency graph for fixed\+\_\+buffer.\+h\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=321pt]{fixed__buffer_8h__incl}
+\includegraphics[width=323pt]{fixed__buffer_8h__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{fixed__buffer_8h_a5a93f43a9d79a6808748cfd443364b33}{TOTAL\+\_\+\+BUFFER\+\_\+\+SIZE}}(BUFF)~((BUFF-\/$>$\mbox{\hyperlink{classMapNode__t_a190b76b1f3d5bd26920300e5f073739b}{length}} $\ast$ BUFF-\/$>$\mbox{\hyperlink{classBuffer__t_a79ee8ab81474571545728b9e3b6426dc}{data\+\_\+width}}) + sizeof(\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}}))
+\#define \mbox{\hyperlink{fixed__buffer_8h_a5a93f43a9d79a6808748cfd443364b33}{TOTAL\+\_\+\+BUFFER\+\_\+\+SIZE}}(BUFF)~((BUFF-\/$>$\mbox{\hyperlink{classMapNode__t_ac9ca1050caee8abc2344bfa57f7e4fb8}{length}} $\ast$ BUFF-\/$>$\mbox{\hyperlink{classBuffer__t_a879515646562c9819457967694fff4ab}{data\+\_\+width}}) + sizeof(\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}}))
 \end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
@@ -25,7 +25,7 @@ typedef struct \+\_\+fixed\+\_\+buffer\+\_\+s {\bfseries Buffer\+\_\+t}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-uint64\+\_\+t \mbox{\hyperlink{fixed__buffer_8h_aa93fb5a320da585002c12734b6fbdbef}{Raw\+Buffer\+Hash}} (uint8\+\_\+t $\ast$buff, uint64\+\_\+t \mbox{\hyperlink{classMapNode__t_a190b76b1f3d5bd26920300e5f073739b}{length}})
+Unsigned\+\_\+t \mbox{\hyperlink{fixed__buffer_8h_af4a8f1309eef97be4f78d3de601d20cb}{Raw\+Buffer\+Hash}} (Byte\+\_\+t $\ast$buff, Unsigned\+\_\+t \mbox{\hyperlink{classMapNode__t_ac9ca1050caee8abc2344bfa57f7e4fb8}{length}})
 \end{DoxyCompactItemize}
 
 
@@ -37,16 +37,16 @@ Fixed buffer with bounds checking
 \index{fixed\_buffer.h@{fixed\_buffer.h}!TOTAL\_BUFFER\_SIZE@{TOTAL\_BUFFER\_SIZE}}
 \index{TOTAL\_BUFFER\_SIZE@{TOTAL\_BUFFER\_SIZE}!fixed\_buffer.h@{fixed\_buffer.h}}
 \doxysubsubsection{\texorpdfstring{TOTAL\_BUFFER\_SIZE}{TOTAL\_BUFFER\_SIZE}}
-{\footnotesize\ttfamily \#define TOTAL\+\_\+\+BUFFER\+\_\+\+SIZE(\begin{DoxyParamCaption}\item[{}]{BUFF }\end{DoxyParamCaption})~((BUFF-\/$>$\mbox{\hyperlink{classMapNode__t_a190b76b1f3d5bd26920300e5f073739b}{length}} $\ast$ BUFF-\/$>$\mbox{\hyperlink{classBuffer__t_a79ee8ab81474571545728b9e3b6426dc}{data\+\_\+width}}) + sizeof(\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}}))}
+{\footnotesize\ttfamily \#define TOTAL\+\_\+\+BUFFER\+\_\+\+SIZE(\begin{DoxyParamCaption}\item[{}]{BUFF }\end{DoxyParamCaption})~((BUFF-\/$>$\mbox{\hyperlink{classMapNode__t_ac9ca1050caee8abc2344bfa57f7e4fb8}{length}} $\ast$ BUFF-\/$>$\mbox{\hyperlink{classBuffer__t_a879515646562c9819457967694fff4ab}{data\+\_\+width}}) + sizeof(\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}}))}
 
 Return the total amount of memory used by a given buffer 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{fixed__buffer_8h_aa93fb5a320da585002c12734b6fbdbef}\label{fixed__buffer_8h_aa93fb5a320da585002c12734b6fbdbef}} 
+\mbox{\Hypertarget{fixed__buffer_8h_af4a8f1309eef97be4f78d3de601d20cb}\label{fixed__buffer_8h_af4a8f1309eef97be4f78d3de601d20cb}} 
 \index{fixed\_buffer.h@{fixed\_buffer.h}!RawBufferHash@{RawBufferHash}}
 \index{RawBufferHash@{RawBufferHash}!fixed\_buffer.h@{fixed\_buffer.h}}
 \doxysubsubsection{\texorpdfstring{RawBufferHash()}{RawBufferHash()}}
-{\footnotesize\ttfamily uint64\+\_\+t Raw\+Buffer\+Hash (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{buff,  }\item[{uint64\+\_\+t}]{length }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Unsigned\+\_\+t Raw\+Buffer\+Hash (\begin{DoxyParamCaption}\item[{Byte\+\_\+t $\ast$}]{buff,  }\item[{Unsigned\+\_\+t}]{length }\end{DoxyParamCaption})}
 
 Hash contents of a raw buffer using the algorithm used by Buffer\+Hash
 
