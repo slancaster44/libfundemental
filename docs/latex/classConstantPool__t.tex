@@ -15,9 +15,7 @@ A pool of constant objects ~\newline
 \item 
 \mbox{\hyperlink{classConstantPool__t}{Constant\+Pool\+\_\+t}} $\ast$ \mbox{\hyperlink{classConstantPool__t_a904840425da128d7f5437fbdf64ecd9e}{New\+Constant\+Pool}} (\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$a)
 \item 
-\mbox{\hyperlink{classConstantObject__t}{Constant\+Object\+\_\+t}} $\ast$ \mbox{\hyperlink{classConstantPool__t_abdafa0a4c3e09df6d740ce6ecad4d463}{New\+Constant}} (\mbox{\hyperlink{classConstantPool__t}{Constant\+Pool\+\_\+t}} $\ast$pool, void $\ast$value, Unsigned\+\_\+t length)
-\item 
-\mbox{\hyperlink{classConstantObject__t}{Constant\+Object\+\_\+t}} $\ast$ \mbox{\hyperlink{classConstantPool__t_aab15fb3bb5b4a71a2948e3d140ecceb7}{New\+String}} (\mbox{\hyperlink{classConstantPool__t}{Constant\+Pool\+\_\+t}} $\ast$pool, char $\ast$str)
+\mbox{\hyperlink{classConstantObject__t}{Constant\+Object\+\_\+t}} $\ast$ \mbox{\hyperlink{classConstantPool__t_abdafa0a4c3e09df6d740ce6ecad4d463}{New\+Constant}} (\mbox{\hyperlink{classConstantPool__t}{Constant\+Pool\+\_\+t}} $\ast$pool, void $\ast$value, \mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}} length)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -40,7 +38,7 @@ Interning a value against a pool will either\+: ~\newline
 \index{ConstantPool\_t@{ConstantPool\_t}!NewConstant@{NewConstant}}
 \index{NewConstant@{NewConstant}!ConstantPool\_t@{ConstantPool\_t}}
 \doxysubsubsection{\texorpdfstring{NewConstant()}{NewConstant()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classConstantObject__t}{Constant\+Object\+\_\+t}} $\ast$ New\+Constant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classConstantPool__t}{Constant\+Pool\+\_\+t}} $\ast$}]{pool,  }\item[{void $\ast$}]{value,  }\item[{Unsigned\+\_\+t}]{length }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classConstantObject__t}{Constant\+Object\+\_\+t}} $\ast$ New\+Constant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classConstantPool__t}{Constant\+Pool\+\_\+t}} $\ast$}]{pool,  }\item[{void $\ast$}]{value,  }\item[{\mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}}}]{length }\end{DoxyParamCaption})}
 
 Add a new value of the given length to a constant pool
 
@@ -64,21 +62,6 @@ Create a new constant pool
 
 \begin{DoxyParams}{Parameters}
 {\em a} & The arena that constant objects will be allocated against. If the objects will be used for the length of the program, it is recommended that ARENA\+\_\+\+PERM is used \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{classConstantPool__t_aab15fb3bb5b4a71a2948e3d140ecceb7}\label{classConstantPool__t_aab15fb3bb5b4a71a2948e3d140ecceb7}} 
-\index{ConstantPool\_t@{ConstantPool\_t}!NewString@{NewString}}
-\index{NewString@{NewString}!ConstantPool\_t@{ConstantPool\_t}}
-\doxysubsubsection{\texorpdfstring{NewString()}{NewString()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classConstantObject__t}{Constant\+Object\+\_\+t}} $\ast$ New\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classConstantPool__t}{Constant\+Pool\+\_\+t}} $\ast$}]{pool,  }\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
-
-Add a c-\/string to a constant pool
-
-
-\begin{DoxyParams}{Parameters}
-{\em pool} & The pool to intern the string against \\
-\hline
-{\em str} & The null terminated string to intern \\
 \hline
 \end{DoxyParams}
 

@@ -78,17 +78,20 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af25fc0daee86908edb8fd6c3f9861301"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBuffer__t.html">Buffer_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBuffer__t.html#af25fc0daee86908edb8fd6c3f9861301">NewBuffer</a> (<a class="el" href="classArena__t.html">Arena_t</a> *a, Unsigned_t <a class="el" href="classBuffer__t.html#a879515646562c9819457967694fff4ab">data_width</a>, Unsigned_t <a class="el" href="classBuffer__t.html#ac9ca1050caee8abc2344bfa57f7e4fb8">length</a>)</td></tr>
+<tr class="memitem:a682c65968dd8ce6575aab05d0856f89c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBuffer__t.html">Buffer_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBuffer__t.html#a682c65968dd8ce6575aab05d0856f89c">InitializeBuffer</a> (<a class="el" href="classByte__t.html">Byte_t</a> *memory, <a class="el" href="classUnsigned__t.html">Unsigned_t</a> <a class="el" href="classBuffer__t.html#a879515646562c9819457967694fff4ab">data_width</a>, <a class="el" href="classUnsigned__t.html">Unsigned_t</a> <a class="el" href="classBuffer__t.html#ac9ca1050caee8abc2344bfa57f7e4fb8">length</a>)</td></tr>
+<tr class="memdesc:a682c65968dd8ce6575aab05d0856f89c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize guarded buffer over statically or stack-allocated memory region.  <a href="classBuffer__t.html#a682c65968dd8ce6575aab05d0856f89c">More...</a><br /></td></tr>
+<tr class="separator:a682c65968dd8ce6575aab05d0856f89c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af25fc0daee86908edb8fd6c3f9861301"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBuffer__t.html">Buffer_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBuffer__t.html#af25fc0daee86908edb8fd6c3f9861301">NewBuffer</a> (<a class="el" href="classArena__t.html">Arena_t</a> *a, <a class="el" href="classUnsigned__t.html">Unsigned_t</a> <a class="el" href="classBuffer__t.html#a879515646562c9819457967694fff4ab">data_width</a>, <a class="el" href="classUnsigned__t.html">Unsigned_t</a> <a class="el" href="classBuffer__t.html#ac9ca1050caee8abc2344bfa57f7e4fb8">length</a>)</td></tr>
 <tr class="separator:af25fc0daee86908edb8fd6c3f9861301"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a5d30ea4032ee21f0464715e0323cf3"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBuffer__t.html#a9a5d30ea4032ee21f0464715e0323cf3">BufferIndex</a> (<a class="el" href="classBuffer__t.html">Buffer_t</a> *b, Unsigned_t idx)</td></tr>
+<tr class="memitem:a9a5d30ea4032ee21f0464715e0323cf3"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBuffer__t.html#a9a5d30ea4032ee21f0464715e0323cf3">BufferIndex</a> (<a class="el" href="classBuffer__t.html">Buffer_t</a> *b, <a class="el" href="classUnsigned__t.html">Unsigned_t</a> idx)</td></tr>
 <tr class="separator:a9a5d30ea4032ee21f0464715e0323cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94abd0708ad67091ac38533f48d7ac53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBuffer__t.html#a94abd0708ad67091ac38533f48d7ac53">BufferInsert</a> (<a class="el" href="classBuffer__t.html">Buffer_t</a> *b, Unsigned_t idx, void *<a class="el" href="classBuffer__t.html#a033403189b9f647900d59b73ba564dc3">data</a>)</td></tr>
+<tr class="memitem:a94abd0708ad67091ac38533f48d7ac53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBuffer__t.html#a94abd0708ad67091ac38533f48d7ac53">BufferInsert</a> (<a class="el" href="classBuffer__t.html">Buffer_t</a> *b, <a class="el" href="classUnsigned__t.html">Unsigned_t</a> idx, void *<a class="el" href="classBuffer__t.html#a033403189b9f647900d59b73ba564dc3">data</a>)</td></tr>
 <tr class="separator:a94abd0708ad67091ac38533f48d7ac53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d6ec28646c8825141c5a89027f2ad78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBuffer__t.html#a0d6ec28646c8825141c5a89027f2ad78">BufferCopyElement</a> (<a class="el" href="classBuffer__t.html">Buffer_t</a> *b, void *dest, Unsigned_t src_idx)</td></tr>
+<tr class="memitem:a0d6ec28646c8825141c5a89027f2ad78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBuffer__t.html#a0d6ec28646c8825141c5a89027f2ad78">BufferCopyElement</a> (<a class="el" href="classBuffer__t.html">Buffer_t</a> *b, void *dest, <a class="el" href="classUnsigned__t.html">Unsigned_t</a> src_idx)</td></tr>
 <tr class="separator:a0d6ec28646c8825141c5a89027f2ad78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdbf9fbdcc006ce40697a1dfe7815ceb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBuffer__t.html">Buffer_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBuffer__t.html#acdbf9fbdcc006ce40697a1dfe7815ceb">BufferClone</a> (<a class="el" href="classBuffer__t.html">Buffer_t</a> *b, <a class="el" href="classArena__t.html">Arena_t</a> *a)</td></tr>
 <tr class="separator:acdbf9fbdcc006ce40697a1dfe7815ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28b44b102846bf73b0113ac5c9dd0bf4"><td class="memItemLeft" align="right" valign="top">Unsigned_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBuffer__t.html#a28b44b102846bf73b0113ac5c9dd0bf4">BufferHash</a> (<a class="el" href="classBuffer__t.html">Buffer_t</a> *b)</td></tr>
+<tr class="memitem:a28b44b102846bf73b0113ac5c9dd0bf4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUnsigned__t.html">Unsigned_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBuffer__t.html#a28b44b102846bf73b0113ac5c9dd0bf4">BufferHash</a> (<a class="el" href="classBuffer__t.html">Buffer_t</a> *b)</td></tr>
 <tr class="separator:a28b44b102846bf73b0113ac5c9dd0bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5c7d288de1ecd8931b8ab20e261efa5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIterator__t.html">Iterator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBuffer__t.html#af5c7d288de1ecd8931b8ab20e261efa5">NewBufferIterator</a> (<a class="el" href="classBuffer__t.html">Buffer_t</a> *buffer)</td></tr>
 <tr class="memdesc:af5c7d288de1ecd8931b8ab20e261efa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an iterator over the given buffer.  <a href="classBuffer__t.html#af5c7d288de1ecd8931b8ab20e261efa5">More...</a><br /></td></tr>
@@ -97,15 +100,15 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a879515646562c9819457967694fff4ab"><td class="memItemLeft" align="right" valign="top"><a id="a879515646562c9819457967694fff4ab"></a>
-Unsigned_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBuffer__t.html#a879515646562c9819457967694fff4ab">data_width</a></td></tr>
+<a class="el" href="classUnsigned__t.html">Unsigned_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBuffer__t.html#a879515646562c9819457967694fff4ab">data_width</a></td></tr>
 <tr class="memdesc:a879515646562c9819457967694fff4ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length, in bytes, of a single data element in the buffer. <br /></td></tr>
 <tr class="separator:a879515646562c9819457967694fff4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9ca1050caee8abc2344bfa57f7e4fb8"><td class="memItemLeft" align="right" valign="top"><a id="ac9ca1050caee8abc2344bfa57f7e4fb8"></a>
-Unsigned_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBuffer__t.html#ac9ca1050caee8abc2344bfa57f7e4fb8">length</a></td></tr>
+<a class="el" href="classUnsigned__t.html">Unsigned_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBuffer__t.html#ac9ca1050caee8abc2344bfa57f7e4fb8">length</a></td></tr>
 <tr class="memdesc:ac9ca1050caee8abc2344bfa57f7e4fb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of data elements the buffer can contain. <br /></td></tr>
 <tr class="separator:ac9ca1050caee8abc2344bfa57f7e4fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a033403189b9f647900d59b73ba564dc3"><td class="memItemLeft" align="right" valign="top"><a id="a033403189b9f647900d59b73ba564dc3"></a>
-Byte_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBuffer__t.html#a033403189b9f647900d59b73ba564dc3">data</a> []</td></tr>
+<a class="el" href="classByte__t.html">Byte_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBuffer__t.html#a033403189b9f647900d59b73ba564dc3">data</a> []</td></tr>
 <tr class="memdesc:a033403189b9f647900d59b73ba564dc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actual buffer data. <br /></td></tr>
 <tr class="separator:a033403189b9f647900d59b73ba564dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -170,7 +173,7 @@ Byte_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Unsigned_t&#160;</td>
+          <td class="paramtype"><a class="el" href="classUnsigned__t.html">Unsigned_t</a>&#160;</td>
           <td class="paramname"><em>src_idx</em>&#160;</td>
         </tr>
         <tr>
@@ -199,7 +202,7 @@ Byte_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Unsigned_t BufferHash </td>
+          <td class="memname"><a class="el" href="classUnsigned__t.html">Unsigned_t</a> BufferHash </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classBuffer__t.html">Buffer_t</a> *&#160;</td>
           <td class="paramname"><em>b</em></td><td>)</td>
@@ -232,7 +235,7 @@ Byte_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Unsigned_t&#160;</td>
+          <td class="paramtype"><a class="el" href="classUnsigned__t.html">Unsigned_t</a>&#160;</td>
           <td class="paramname"><em>idx</em>&#160;</td>
         </tr>
         <tr>
@@ -268,7 +271,7 @@ Byte_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Unsigned_t&#160;</td>
+          <td class="paramtype"><a class="el" href="classUnsigned__t.html">Unsigned_t</a>&#160;</td>
           <td class="paramname"><em>idx</em>, </td>
         </tr>
         <tr>
@@ -296,6 +299,50 @@ Byte_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 
 </div>
 </div>
+<a id="a682c65968dd8ce6575aab05d0856f89c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a682c65968dd8ce6575aab05d0856f89c">&#9670;&nbsp;</a></span>InitializeBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classBuffer__t.html">Buffer_t</a> * InitializeBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classByte__t.html">Byte_t</a> *&#160;</td>
+          <td class="paramname"><em>memory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classUnsigned__t.html">Unsigned_t</a>&#160;</td>
+          <td class="paramname"><em>data_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classUnsigned__t.html">Unsigned_t</a>&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize guarded buffer over statically or stack-allocated memory region. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">memory</td><td>The memory to initialize the <a class="el" href="classBuffer__t.html" title="Fixed memory buffer with bounds checking.">Buffer_t</a> over </td></tr>
+    <tr><td class="paramname">data_width</td><td>The width of a single element within the new buffer </td></tr>
+    <tr><td class="paramname">total_length</td><td>The number of elements contained in the buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="af25fc0daee86908edb8fd6c3f9861301"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af25fc0daee86908edb8fd6c3f9861301">&#9670;&nbsp;</a></span>NewBuffer()</h2>
 
@@ -311,13 +358,13 @@ Byte_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Unsigned_t&#160;</td>
+          <td class="paramtype"><a class="el" href="classUnsigned__t.html">Unsigned_t</a>&#160;</td>
           <td class="paramname"><em>data_width</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Unsigned_t&#160;</td>
+          <td class="paramtype"><a class="el" href="classUnsigned__t.html">Unsigned_t</a>&#160;</td>
           <td class="paramname"><em>length</em>&#160;</td>
         </tr>
         <tr>

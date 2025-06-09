@@ -12,7 +12,7 @@ A linked list element.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} $\ast$ \mbox{\hyperlink{classListNode__t_ae754201593ea8a3429ac8811ab984a63}{New\+List\+Node}} (\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$arena, void $\ast$\mbox{\hyperlink{classListNode__t_a033403189b9f647900d59b73ba564dc3}{data}}, Unsigned\+\_\+t \mbox{\hyperlink{classListNode__t_ac9ca1050caee8abc2344bfa57f7e4fb8}{length}})
+\mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} $\ast$ \mbox{\hyperlink{classListNode__t_ae754201593ea8a3429ac8811ab984a63}{New\+List\+Node}} (\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$arena, void $\ast$\mbox{\hyperlink{classListNode__t_a033403189b9f647900d59b73ba564dc3}{data}}, \mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}} \mbox{\hyperlink{classListNode__t_ac9ca1050caee8abc2344bfa57f7e4fb8}{length}})
 \item 
 void \mbox{\hyperlink{classListNode__t_a42367671d3fc9280649336c9e5e796bc}{List\+Node\+Write\+Data}} (\mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} $\ast$ln, void $\ast$\mbox{\hyperlink{classListNode__t_a033403189b9f647900d59b73ba564dc3}{data}})
 \end{DoxyCompactItemize}
@@ -26,10 +26,10 @@ struct \+\_\+list\+\_\+node\+\_\+s $\ast$ \mbox{\hyperlink{classListNode__t_af03
 struct \+\_\+list\+\_\+node\+\_\+s $\ast$ \mbox{\hyperlink{classListNode__t_a2654488ad901e452c48b575183cb2990}{previous}}
 \begin{DoxyCompactList}\small\item\em The previous item in the linked list. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classListNode__t_ac9ca1050caee8abc2344bfa57f7e4fb8}\label{classListNode__t_ac9ca1050caee8abc2344bfa57f7e4fb8}} 
-Unsigned\+\_\+t \mbox{\hyperlink{classListNode__t_ac9ca1050caee8abc2344bfa57f7e4fb8}{length}}
+\mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}} \mbox{\hyperlink{classListNode__t_ac9ca1050caee8abc2344bfa57f7e4fb8}{length}}
 \begin{DoxyCompactList}\small\item\em The length of the data element. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classListNode__t_a033403189b9f647900d59b73ba564dc3}\label{classListNode__t_a033403189b9f647900d59b73ba564dc3}} 
-Byte\+\_\+t \mbox{\hyperlink{classListNode__t_a033403189b9f647900d59b73ba564dc3}{data}} \mbox{[}$\,$\mbox{]}
+\mbox{\hyperlink{classByte__t}{Byte\+\_\+t}} \mbox{\hyperlink{classListNode__t_a033403189b9f647900d59b73ba564dc3}{data}} \mbox{[}$\,$\mbox{]}
 \begin{DoxyCompactList}\small\item\em The data stored in this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -56,7 +56,7 @@ Write to the data section of the given list node
 \index{ListNode\_t@{ListNode\_t}!NewListNode@{NewListNode}}
 \index{NewListNode@{NewListNode}!ListNode\_t@{ListNode\_t}}
 \doxysubsubsection{\texorpdfstring{NewListNode()}{NewListNode()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} $\ast$ New\+List\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$}]{arena,  }\item[{void $\ast$}]{data,  }\item[{Unsigned\+\_\+t}]{length }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classListNode__t}{List\+Node\+\_\+t}} $\ast$ New\+List\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$}]{arena,  }\item[{void $\ast$}]{data,  }\item[{\mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}}}]{length }\end{DoxyParamCaption})}
 
 Create a list node of a given length, and copy the data into it. The next and previous elements will be initialized to the same node
 

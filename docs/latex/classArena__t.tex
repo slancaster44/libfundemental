@@ -16,7 +16,7 @@ void \mbox{\hyperlink{classArena__t_acef1de231590dce61c354a69e56b37eb}{Construct
 \item 
 void \mbox{\hyperlink{classArena__t_a412dcb8c52f0c24efb33b154c6cf240d}{Deconstruct\+Arena}} (\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$a)
 \item 
-void $\ast$ \mbox{\hyperlink{classArena__t_a75838057f112f121ca2b0dc5b50e13ce}{Arena\+Allocate}} (\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$a, Unsigned\+\_\+t size)
+void $\ast$ \mbox{\hyperlink{classArena__t_a75838057f112f121ca2b0dc5b50e13ce}{Arena\+Allocate}} (\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$a, \mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}} size)
 \end{DoxyCompactItemize}
 
 
@@ -30,7 +30,7 @@ All values allocated against a given arena will be freed when the arena is decon
 \index{Arena\_t@{Arena\_t}!ArenaAllocate@{ArenaAllocate}}
 \index{ArenaAllocate@{ArenaAllocate}!Arena\_t@{Arena\_t}}
 \doxysubsubsection{\texorpdfstring{ArenaAllocate()}{ArenaAllocate()}}
-{\footnotesize\ttfamily void $\ast$ Arena\+Allocate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$}]{a,  }\item[{Unsigned\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void $\ast$ Arena\+Allocate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$}]{a,  }\item[{\mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}}}]{size }\end{DoxyParamCaption})}
 
 Allocate a buffer of length \textquotesingle{}size\textquotesingle{} to an arena. If the arena is ARENA\+\_\+\+NONE, then simply use \textquotesingle{}malloc()\textquotesingle{} from the standard library
 

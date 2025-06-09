@@ -19,7 +19,9 @@ void \mbox{\hyperlink{classIterator__t_a4b0979a07e3fd4efbec359f61330eb51}{Iterat
 bool \mbox{\hyperlink{classIterator__t_aa73158a3c8e7585d737ead31a41f8361}{Iterator\+Done}} (\mbox{\hyperlink{classIterator__t}{Iterator\+\_\+t}} $\ast$it)
 \begin{DoxyCompactList}\small\item\em Test if the iterator is done. \end{DoxyCompactList}\item 
 void $\ast$ \mbox{\hyperlink{classIterator__t_a7a021c360403709fbb7ab6d6b8ae1f81}{Iterator\+Item}} (\mbox{\hyperlink{classIterator__t}{Iterator\+\_\+t}} $\ast$it)
-\begin{DoxyCompactList}\small\item\em Returns a void$\ast$ to the current item in the collection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns a void$\ast$ to the current item in the collection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIterator__t_a7956a3d3f441a2666cf8d7e87e5bea17}{Iterator\+Close}} (\mbox{\hyperlink{classIterator__t}{Iterator\+\_\+t}} $\ast$it)
+\begin{DoxyCompactList}\small\item\em Cleanup iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -31,13 +33,28 @@ Example usage on a buffer of integers\+:
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\mbox{\hyperlink{classIterator__t}{Iterator\_t}} it = NewBufferIterator(buffer); !\mbox{\hyperlink{classIterator__t_aa73158a3c8e7585d737ead31a41f8361}{IteratorDone}}(\&it); \mbox{\hyperlink{classIterator__t_a70e52dc1dc137adbd9192d3ed51f02ac}{IteratorNext}}(\&it))}
 \DoxyCodeLine{\{}
-\DoxyCodeLine{    Unsigned\_t *my\_number\_ptr = \mbox{\hyperlink{classIterator__t_a7a021c360403709fbb7ab6d6b8ae1f81}{IteratorItem}}(\&it);}
+\DoxyCodeLine{    \mbox{\hyperlink{classUnsigned__t}{Unsigned\_t}} *my\_number\_ptr = \mbox{\hyperlink{classIterator__t_a7a021c360403709fbb7ab6d6b8ae1f81}{IteratorItem}}(\&it);}
 \DoxyCodeLine{\}}
 
 \end{DoxyCode}
  
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIterator__t_a7956a3d3f441a2666cf8d7e87e5bea17}\label{classIterator__t_a7956a3d3f441a2666cf8d7e87e5bea17}} 
+\index{Iterator\_t@{Iterator\_t}!IteratorClose@{IteratorClose}}
+\index{IteratorClose@{IteratorClose}!Iterator\_t@{Iterator\_t}}
+\doxysubsubsection{\texorpdfstring{IteratorClose()}{IteratorClose()}}
+{\footnotesize\ttfamily void Iterator\+Close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIterator__t}{Iterator\+\_\+t}} $\ast$}]{it }\end{DoxyParamCaption})}
+
+
+
+Cleanup iterator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em it} & The iterator to cleanup \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classIterator__t_aa73158a3c8e7585d737ead31a41f8361}\label{classIterator__t_aa73158a3c8e7585d737ead31a41f8361}} 
 \index{Iterator\_t@{Iterator\_t}!IteratorDone@{IteratorDone}}
 \index{IteratorDone@{IteratorDone}!Iterator\_t@{Iterator\_t}}

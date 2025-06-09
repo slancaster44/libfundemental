@@ -12,17 +12,19 @@ Fixed memory buffer with bounds checking.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$ \mbox{\hyperlink{classBuffer__t_af25fc0daee86908edb8fd6c3f9861301}{New\+Buffer}} (\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$a, Unsigned\+\_\+t \mbox{\hyperlink{classBuffer__t_a879515646562c9819457967694fff4ab}{data\+\_\+width}}, Unsigned\+\_\+t \mbox{\hyperlink{classBuffer__t_ac9ca1050caee8abc2344bfa57f7e4fb8}{length}})
+\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$ \mbox{\hyperlink{classBuffer__t_a682c65968dd8ce6575aab05d0856f89c}{Initialize\+Buffer}} (\mbox{\hyperlink{classByte__t}{Byte\+\_\+t}} $\ast$memory, \mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}} \mbox{\hyperlink{classBuffer__t_a879515646562c9819457967694fff4ab}{data\+\_\+width}}, \mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}} \mbox{\hyperlink{classBuffer__t_ac9ca1050caee8abc2344bfa57f7e4fb8}{length}})
+\begin{DoxyCompactList}\small\item\em Initialize guarded buffer over statically or stack-\/allocated memory region. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$ \mbox{\hyperlink{classBuffer__t_af25fc0daee86908edb8fd6c3f9861301}{New\+Buffer}} (\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$a, \mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}} \mbox{\hyperlink{classBuffer__t_a879515646562c9819457967694fff4ab}{data\+\_\+width}}, \mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}} \mbox{\hyperlink{classBuffer__t_ac9ca1050caee8abc2344bfa57f7e4fb8}{length}})
 \item 
-void $\ast$ \mbox{\hyperlink{classBuffer__t_a9a5d30ea4032ee21f0464715e0323cf3}{Buffer\+Index}} (\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$b, Unsigned\+\_\+t idx)
+void $\ast$ \mbox{\hyperlink{classBuffer__t_a9a5d30ea4032ee21f0464715e0323cf3}{Buffer\+Index}} (\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$b, \mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}} idx)
 \item 
-void \mbox{\hyperlink{classBuffer__t_a94abd0708ad67091ac38533f48d7ac53}{Buffer\+Insert}} (\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$b, Unsigned\+\_\+t idx, void $\ast$\mbox{\hyperlink{classBuffer__t_a033403189b9f647900d59b73ba564dc3}{data}})
+void \mbox{\hyperlink{classBuffer__t_a94abd0708ad67091ac38533f48d7ac53}{Buffer\+Insert}} (\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$b, \mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}} idx, void $\ast$\mbox{\hyperlink{classBuffer__t_a033403189b9f647900d59b73ba564dc3}{data}})
 \item 
-void \mbox{\hyperlink{classBuffer__t_a0d6ec28646c8825141c5a89027f2ad78}{Buffer\+Copy\+Element}} (\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$b, void $\ast$dest, Unsigned\+\_\+t src\+\_\+idx)
+void \mbox{\hyperlink{classBuffer__t_a0d6ec28646c8825141c5a89027f2ad78}{Buffer\+Copy\+Element}} (\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$b, void $\ast$dest, \mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}} src\+\_\+idx)
 \item 
 \mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$ \mbox{\hyperlink{classBuffer__t_acdbf9fbdcc006ce40697a1dfe7815ceb}{Buffer\+Clone}} (\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$b, \mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$a)
 \item 
-Unsigned\+\_\+t \mbox{\hyperlink{classBuffer__t_a28b44b102846bf73b0113ac5c9dd0bf4}{Buffer\+Hash}} (\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$b)
+\mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}} \mbox{\hyperlink{classBuffer__t_a28b44b102846bf73b0113ac5c9dd0bf4}{Buffer\+Hash}} (\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$b)
 \item 
 \mbox{\hyperlink{classIterator__t}{Iterator\+\_\+t}} \mbox{\hyperlink{classBuffer__t_af5c7d288de1ecd8931b8ab20e261efa5}{New\+Buffer\+Iterator}} (\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$buffer)
 \begin{DoxyCompactList}\small\item\em Create an iterator over the given buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -30,13 +32,13 @@ Unsigned\+\_\+t \mbox{\hyperlink{classBuffer__t_a28b44b102846bf73b0113ac5c9dd0bf
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classBuffer__t_a879515646562c9819457967694fff4ab}\label{classBuffer__t_a879515646562c9819457967694fff4ab}} 
-Unsigned\+\_\+t \mbox{\hyperlink{classBuffer__t_a879515646562c9819457967694fff4ab}{data\+\_\+width}}
+\mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}} \mbox{\hyperlink{classBuffer__t_a879515646562c9819457967694fff4ab}{data\+\_\+width}}
 \begin{DoxyCompactList}\small\item\em Length, in bytes, of a single data element in the buffer. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classBuffer__t_ac9ca1050caee8abc2344bfa57f7e4fb8}\label{classBuffer__t_ac9ca1050caee8abc2344bfa57f7e4fb8}} 
-Unsigned\+\_\+t \mbox{\hyperlink{classBuffer__t_ac9ca1050caee8abc2344bfa57f7e4fb8}{length}}
+\mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}} \mbox{\hyperlink{classBuffer__t_ac9ca1050caee8abc2344bfa57f7e4fb8}{length}}
 \begin{DoxyCompactList}\small\item\em Number of data elements the buffer can contain. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classBuffer__t_a033403189b9f647900d59b73ba564dc3}\label{classBuffer__t_a033403189b9f647900d59b73ba564dc3}} 
-Byte\+\_\+t \mbox{\hyperlink{classBuffer__t_a033403189b9f647900d59b73ba564dc3}{data}} \mbox{[}$\,$\mbox{]}
+\mbox{\hyperlink{classByte__t}{Byte\+\_\+t}} \mbox{\hyperlink{classBuffer__t_a033403189b9f647900d59b73ba564dc3}{data}} \mbox{[}$\,$\mbox{]}
 \begin{DoxyCompactList}\small\item\em Actual buffer data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -65,7 +67,7 @@ Clone a buffer into a new arena
 \index{Buffer\_t@{Buffer\_t}!BufferCopyElement@{BufferCopyElement}}
 \index{BufferCopyElement@{BufferCopyElement}!Buffer\_t@{Buffer\_t}}
 \doxysubsubsection{\texorpdfstring{BufferCopyElement()}{BufferCopyElement()}}
-{\footnotesize\ttfamily void Buffer\+Copy\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$}]{b,  }\item[{void $\ast$}]{dest,  }\item[{Unsigned\+\_\+t}]{src\+\_\+idx }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Buffer\+Copy\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$}]{b,  }\item[{void $\ast$}]{dest,  }\item[{\mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}}}]{src\+\_\+idx }\end{DoxyParamCaption})}
 
 Copy an element out of a buffer
 
@@ -82,7 +84,7 @@ Copy an element out of a buffer
 \index{Buffer\_t@{Buffer\_t}!BufferHash@{BufferHash}}
 \index{BufferHash@{BufferHash}!Buffer\_t@{Buffer\_t}}
 \doxysubsubsection{\texorpdfstring{BufferHash()}{BufferHash()}}
-{\footnotesize\ttfamily Unsigned\+\_\+t Buffer\+Hash (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$}]{b }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}} Buffer\+Hash (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$}]{b }\end{DoxyParamCaption})}
 
 Hash the contents of a given buffer
 
@@ -95,7 +97,7 @@ Hash the contents of a given buffer
 \index{Buffer\_t@{Buffer\_t}!BufferIndex@{BufferIndex}}
 \index{BufferIndex@{BufferIndex}!Buffer\_t@{Buffer\_t}}
 \doxysubsubsection{\texorpdfstring{BufferIndex()}{BufferIndex()}}
-{\footnotesize\ttfamily void $\ast$ Buffer\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$}]{b,  }\item[{Unsigned\+\_\+t}]{idx }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void $\ast$ Buffer\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$}]{b,  }\item[{\mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}}}]{idx }\end{DoxyParamCaption})}
 
 Get a pointer to a given element within a buffer
 
@@ -110,7 +112,7 @@ Get a pointer to a given element within a buffer
 \index{Buffer\_t@{Buffer\_t}!BufferInsert@{BufferInsert}}
 \index{BufferInsert@{BufferInsert}!Buffer\_t@{Buffer\_t}}
 \doxysubsubsection{\texorpdfstring{BufferInsert()}{BufferInsert()}}
-{\footnotesize\ttfamily void Buffer\+Insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$}]{b,  }\item[{Unsigned\+\_\+t}]{idx,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Buffer\+Insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$}]{b,  }\item[{\mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}}}]{idx,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
 
 Write an element to a buffer
 
@@ -123,11 +125,30 @@ Write an element to a buffer
 {\em data} & A pointer to the element \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classBuffer__t_a682c65968dd8ce6575aab05d0856f89c}\label{classBuffer__t_a682c65968dd8ce6575aab05d0856f89c}} 
+\index{Buffer\_t@{Buffer\_t}!InitializeBuffer@{InitializeBuffer}}
+\index{InitializeBuffer@{InitializeBuffer}!Buffer\_t@{Buffer\_t}}
+\doxysubsubsection{\texorpdfstring{InitializeBuffer()}{InitializeBuffer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$ Initialize\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classByte__t}{Byte\+\_\+t}} $\ast$}]{memory,  }\item[{\mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}}}]{data\+\_\+width,  }\item[{\mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}}}]{length }\end{DoxyParamCaption})}
+
+
+
+Initialize guarded buffer over statically or stack-\/allocated memory region. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em memory} & The memory to initialize the \mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} over \\
+\hline
+{\em data\+\_\+width} & The width of a single element within the new buffer \\
+\hline
+{\em total\+\_\+length} & The number of elements contained in the buffer \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classBuffer__t_af25fc0daee86908edb8fd6c3f9861301}\label{classBuffer__t_af25fc0daee86908edb8fd6c3f9861301}} 
 \index{Buffer\_t@{Buffer\_t}!NewBuffer@{NewBuffer}}
 \index{NewBuffer@{NewBuffer}!Buffer\_t@{Buffer\_t}}
 \doxysubsubsection{\texorpdfstring{NewBuffer()}{NewBuffer()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$ New\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$}]{a,  }\item[{Unsigned\+\_\+t}]{data\+\_\+width,  }\item[{Unsigned\+\_\+t}]{length }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBuffer__t}{Buffer\+\_\+t}} $\ast$ New\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$}]{a,  }\item[{\mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}}}]{data\+\_\+width,  }\item[{\mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}}}]{length }\end{DoxyParamCaption})}
 
 Create a new buffer
 

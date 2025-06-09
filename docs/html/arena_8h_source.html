@@ -73,14 +73,14 @@ $(function() {
 <a href="arena_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __LIB_FUNDEMENTAL_ARENA_H__</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __LIB_FUNDEMENTAL_ARENA_H__</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;basic_types.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="basic__types_8h.html">basic_types.h</a>&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_arena_block_s</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">struct </span>_arena_block_s *next;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    Byte_t *start;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    Byte_t *end;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classByte__t.html">Byte_t</a> *start;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classByte__t.html">Byte_t</a> *end;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;} ArenaBlock_t;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="arena_8h.html#a76542edd965392f01c15551b1efd1d77">   32</a></span>&#160;<span class="preprocessor">#define ARENA_BLOCK_SIZE 4096</span></div>
@@ -100,15 +100,18 @@ $(function() {
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classArena__t.html#a412dcb8c52f0c24efb33b154c6cf240d">DeconstructArena</a>(<a class="code" href="classArena__t.html">Arena_t</a> *a);</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keywordtype">void</span> *<a class="code" href="classArena__t.html#a75838057f112f121ca2b0dc5b50e13ce">ArenaAllocate</a>(<a class="code" href="classArena__t.html">Arena_t</a> *a, Unsigned_t size);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keywordtype">void</span> *<a class="code" href="classArena__t.html#a75838057f112f121ca2b0dc5b50e13ce">ArenaAllocate</a>(<a class="code" href="classArena__t.html">Arena_t</a> *a, <a class="code" href="classUnsigned__t.html">Unsigned_t</a> size);</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aarena_8h_html_a6267f464eaecd9b5e32f0965c5316cb4"><div class="ttname"><a href="arena_8h.html#a6267f464eaecd9b5e32f0965c5316cb4">ARENA_NONE</a></div><div class="ttdeci">static Arena_t ARENA_NONE</div><div class="ttdef"><b>Definition:</b> arena.h:67</div></div>
 <div class="ttc" id="aarena_8h_html_a69a07afe0c3228a4d96a5a345a33a3f0"><div class="ttname"><a href="arena_8h.html#a69a07afe0c3228a4d96a5a345a33a3f0">ARENA_PERM</a></div><div class="ttdeci">static Arena_t ARENA_PERM</div><div class="ttdef"><b>Definition:</b> arena.h:60</div></div>
+<div class="ttc" id="abasic__types_8h_html"><div class="ttname"><a href="basic__types_8h.html">basic_types.h</a></div></div>
 <div class="ttc" id="aclassArena__t_html"><div class="ttname"><a href="classArena__t.html">Arena_t</a></div><div class="ttdoc">A memory allocation arena.</div></div>
 <div class="ttc" id="aclassArena__t_html_a412dcb8c52f0c24efb33b154c6cf240d"><div class="ttname"><a href="classArena__t.html#a412dcb8c52f0c24efb33b154c6cf240d">Arena_t::DeconstructArena</a></div><div class="ttdeci">void DeconstructArena(Arena_t *a)</div><div class="ttdef"><b>Definition:</b> arena.c:27</div></div>
 <div class="ttc" id="aclassArena__t_html_a75838057f112f121ca2b0dc5b50e13ce"><div class="ttname"><a href="classArena__t.html#a75838057f112f121ca2b0dc5b50e13ce">Arena_t::ArenaAllocate</a></div><div class="ttdeci">void * ArenaAllocate(Arena_t *a, Unsigned_t size)</div><div class="ttdef"><b>Definition:</b> arena.c:38</div></div>
 <div class="ttc" id="aclassArena__t_html_acef1de231590dce61c354a69e56b37eb"><div class="ttname"><a href="classArena__t.html#acef1de231590dce61c354a69e56b37eb">Arena_t::ConstructArena</a></div><div class="ttdeci">void ConstructArena(Arena_t *a)</div><div class="ttdef"><b>Definition:</b> arena.c:22</div></div>
+<div class="ttc" id="aclassByte__t_html"><div class="ttname"><a href="classByte__t.html">Byte_t</a></div><div class="ttdoc">The smallest addressable unit supported by the machine.</div></div>
+<div class="ttc" id="aclassUnsigned__t_html"><div class="ttname"><a href="classUnsigned__t.html">Unsigned_t</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

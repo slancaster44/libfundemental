@@ -12,9 +12,9 @@ A binary map key-\/value pair.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classMapNode__t}{Map\+Node\+\_\+t}} $\ast$ \mbox{\hyperlink{classMapNode__t_a068a17251cb472a60f3994217e8e4370}{New\+Map\+Node}} (\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$arena, \mbox{\hyperlink{classMapKey__t}{Map\+Key\+\_\+t}} \mbox{\hyperlink{classMapNode__t_a232b1f114ebd3a213ce68b6236ac8abd}{key}}, void $\ast$\mbox{\hyperlink{classMapNode__t_a2eb42599867225f00220e22e8b6680d4}{value}}, Unsigned\+\_\+t \mbox{\hyperlink{classMapNode__t_ac9ca1050caee8abc2344bfa57f7e4fb8}{length}})
+\mbox{\hyperlink{classMapNode__t}{Map\+Node\+\_\+t}} $\ast$ \mbox{\hyperlink{classMapNode__t_a068a17251cb472a60f3994217e8e4370}{New\+Map\+Node}} (\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$arena, \mbox{\hyperlink{classMapKey__t}{Map\+Key\+\_\+t}} \mbox{\hyperlink{classMapNode__t_a232b1f114ebd3a213ce68b6236ac8abd}{key}}, void $\ast$\mbox{\hyperlink{classMapNode__t_a2eb42599867225f00220e22e8b6680d4}{value}}, \mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}} \mbox{\hyperlink{classMapNode__t_ac9ca1050caee8abc2344bfa57f7e4fb8}{length}})
 \begin{DoxyCompactList}\small\item\em Create new map node. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classMapNode__t_a160ee6f0866d4eab45fa28f2a81cdf1a}{Write\+Map\+Node\+Value}} (\mbox{\hyperlink{classMapNode__t}{Map\+Node\+\_\+t}} $\ast$mn, void $\ast$\mbox{\hyperlink{classMapNode__t_a2eb42599867225f00220e22e8b6680d4}{value}}, Unsigned\+\_\+t \mbox{\hyperlink{classMapNode__t_ac9ca1050caee8abc2344bfa57f7e4fb8}{length}})
+void \mbox{\hyperlink{classMapNode__t_a160ee6f0866d4eab45fa28f2a81cdf1a}{Write\+Map\+Node\+Value}} (\mbox{\hyperlink{classMapNode__t}{Map\+Node\+\_\+t}} $\ast$mn, void $\ast$\mbox{\hyperlink{classMapNode__t_a2eb42599867225f00220e22e8b6680d4}{value}}, \mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}} \mbox{\hyperlink{classMapNode__t_ac9ca1050caee8abc2344bfa57f7e4fb8}{length}})
 \begin{DoxyCompactList}\small\item\em Copy a value into a map node. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -30,10 +30,10 @@ struct \+\_\+map\+\_\+node\+\_\+s $\ast$ \mbox{\hyperlink{classMapNode__t_a746e2
 \mbox{\hyperlink{classMapKey__t}{Map\+Key\+\_\+t}} \mbox{\hyperlink{classMapNode__t_a232b1f114ebd3a213ce68b6236ac8abd}{key}}
 \begin{DoxyCompactList}\small\item\em The key for this map node. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classMapNode__t_ac9ca1050caee8abc2344bfa57f7e4fb8}\label{classMapNode__t_ac9ca1050caee8abc2344bfa57f7e4fb8}} 
-Unsigned\+\_\+t \mbox{\hyperlink{classMapNode__t_ac9ca1050caee8abc2344bfa57f7e4fb8}{length}}
+\mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}} \mbox{\hyperlink{classMapNode__t_ac9ca1050caee8abc2344bfa57f7e4fb8}{length}}
 \begin{DoxyCompactList}\small\item\em The length of this map node\textquotesingle{}s value. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classMapNode__t_a2eb42599867225f00220e22e8b6680d4}\label{classMapNode__t_a2eb42599867225f00220e22e8b6680d4}} 
-Byte\+\_\+t \mbox{\hyperlink{classMapNode__t_a2eb42599867225f00220e22e8b6680d4}{value}} \mbox{[}$\,$\mbox{]}
+\mbox{\hyperlink{classByte__t}{Byte\+\_\+t}} \mbox{\hyperlink{classMapNode__t_a2eb42599867225f00220e22e8b6680d4}{value}} \mbox{[}$\,$\mbox{]}
 \begin{DoxyCompactList}\small\item\em The value for this map node. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -45,7 +45,7 @@ A binary map key-\/value pair.
 \index{MapNode\_t@{MapNode\_t}!NewMapNode@{NewMapNode}}
 \index{NewMapNode@{NewMapNode}!MapNode\_t@{MapNode\_t}}
 \doxysubsubsection{\texorpdfstring{NewMapNode()}{NewMapNode()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classMapNode__t}{Map\+Node\+\_\+t}} $\ast$ New\+Map\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$}]{arena,  }\item[{\mbox{\hyperlink{classMapKey__t}{Map\+Key\+\_\+t}}}]{key,  }\item[{void $\ast$}]{value,  }\item[{Unsigned\+\_\+t}]{length }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMapNode__t}{Map\+Node\+\_\+t}} $\ast$ New\+Map\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArena__t}{Arena\+\_\+t}} $\ast$}]{arena,  }\item[{\mbox{\hyperlink{classMapKey__t}{Map\+Key\+\_\+t}}}]{key,  }\item[{void $\ast$}]{value,  }\item[{\mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}}}]{length }\end{DoxyParamCaption})}
 
 
 
@@ -66,7 +66,7 @@ Create new map node.
 \index{MapNode\_t@{MapNode\_t}!WriteMapNodeValue@{WriteMapNodeValue}}
 \index{WriteMapNodeValue@{WriteMapNodeValue}!MapNode\_t@{MapNode\_t}}
 \doxysubsubsection{\texorpdfstring{WriteMapNodeValue()}{WriteMapNodeValue()}}
-{\footnotesize\ttfamily void Write\+Map\+Node\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMapNode__t}{Map\+Node\+\_\+t}} $\ast$}]{mn,  }\item[{void $\ast$}]{value,  }\item[{Unsigned\+\_\+t}]{length }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Write\+Map\+Node\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMapNode__t}{Map\+Node\+\_\+t}} $\ast$}]{mn,  }\item[{void $\ast$}]{value,  }\item[{\mbox{\hyperlink{classUnsigned__t}{Unsigned\+\_\+t}}}]{length }\end{DoxyParamCaption})}
 
 
 

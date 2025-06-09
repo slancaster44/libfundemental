@@ -1,4 +1,5 @@
 <map id="inc/linked_list.h" name="inc/linked_list.h">
-<area shape="rect" id="node1" title=" " alt="" coords="18,5,141,32"/>
-<area shape="rect" id="node2" href="$constant__pool_8h.html" title=" " alt="" coords="5,80,153,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="23,5,145,32"/>
+<area shape="rect" id="node2" href="$constant__pool_8h.html" title=" " alt="" coords="10,80,158,107"/>
+<area shape="rect" id="node3" href="$constant__string_8h.html" title="Pool of interned strings." alt="" coords="5,155,163,181"/>
 </map>

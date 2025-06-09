@@ -1,0 +1,12 @@
+<map id="inc/basic_types.h" name="inc/basic_types.h">
+<area shape="rect" id="node1" title=" " alt="" coords="141,5,275,32"/>
+<area shape="rect" id="node2" href="$alignment_8h.html" title=" " alt="" coords="5,80,128,107"/>
+<area shape="rect" id="node3" href="$arena_8h.html" title=" " alt="" coords="203,80,298,107"/>
+<area shape="rect" id="node4" href="$binary__map_8h.html" title=" " alt="" coords="62,155,197,181"/>
+<area shape="rect" id="node9" href="$iterator_8h.html" title=" " alt="" coords="323,80,427,107"/>
+<area shape="rect" id="node5" href="$fixed__buffer_8h.html" title=" " alt="" coords="221,155,353,181"/>
+<area shape="rect" id="node6" href="$linked__list_8h.html" title=" " alt="" coords="377,155,500,181"/>
+<area shape="rect" id="node7" href="$constant__pool_8h.html" title=" " alt="" coords="365,229,513,256"/>
+<area shape="rect" id="node8" href="$constant__string_8h.html" title="Pool of interned strings." alt="" coords="360,304,517,331"/>
+<area shape="rect" id="node10" href="$file__iterator_8h_source.html" title=" " alt="" coords="524,155,655,181"/>
+</map>

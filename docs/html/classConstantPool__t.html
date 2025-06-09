@@ -81,10 +81,8 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a904840425da128d7f5437fbdf64ecd9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classConstantPool__t.html">ConstantPool_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstantPool__t.html#a904840425da128d7f5437fbdf64ecd9e">NewConstantPool</a> (<a class="el" href="classArena__t.html">Arena_t</a> *a)</td></tr>
 <tr class="separator:a904840425da128d7f5437fbdf64ecd9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdafa0a4c3e09df6d740ce6ecad4d463"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classConstantObject__t.html">ConstantObject_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstantPool__t.html#abdafa0a4c3e09df6d740ce6ecad4d463">NewConstant</a> (<a class="el" href="classConstantPool__t.html">ConstantPool_t</a> *pool, void *value, Unsigned_t length)</td></tr>
+<tr class="memitem:abdafa0a4c3e09df6d740ce6ecad4d463"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classConstantObject__t.html">ConstantObject_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstantPool__t.html#abdafa0a4c3e09df6d740ce6ecad4d463">NewConstant</a> (<a class="el" href="classConstantPool__t.html">ConstantPool_t</a> *pool, void *value, <a class="el" href="classUnsigned__t.html">Unsigned_t</a> length)</td></tr>
 <tr class="separator:abdafa0a4c3e09df6d740ce6ecad4d463"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab15fb3bb5b4a71a2948e3d140ecceb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classConstantObject__t.html">ConstantObject_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConstantPool__t.html#aab15fb3bb5b4a71a2948e3d140ecceb7">NewString</a> (<a class="el" href="classConstantPool__t.html">ConstantPool_t</a> *pool, char *str)</td></tr>
-<tr class="separator:aab15fb3bb5b4a71a2948e3d140ecceb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -121,7 +119,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Unsigned_t&#160;</td>
+          <td class="paramtype"><a class="el" href="classUnsigned__t.html">Unsigned_t</a>&#160;</td>
           <td class="paramname"><em>length</em>&#160;</td>
         </tr>
         <tr>
@@ -162,42 +160,6 @@ Public Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>The arena that constant objects will be allocated against. If the objects will be used for the length of the program, it is recommended that ARENA_PERM is used </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aab15fb3bb5b4a71a2948e3d140ecceb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab15fb3bb5b4a71a2948e3d140ecceb7">&#9670;&nbsp;</a></span>NewString()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classConstantObject__t.html">ConstantObject_t</a> * NewString </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classConstantPool__t.html">ConstantPool_t</a> *&#160;</td>
-          <td class="paramname"><em>pool</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>str</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Add a c-string to a constant pool</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pool</td><td>The pool to intern the string against </td></tr>
-    <tr><td class="paramname">str</td><td>The null terminated string to intern </td></tr>
   </table>
   </dd>
 </dl>

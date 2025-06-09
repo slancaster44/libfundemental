@@ -74,40 +74,45 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __LIB_FUNDEMENTAL_ITERATOR_H__</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;basic_types.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="basic__types_8h.html">basic_types.h</a>&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">typedef</span> void (*IteratorMove_t)(<span class="keywordtype">void</span> *opaque);</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">typedef</span> bool (*IteratorDone_t)(<span class="keywordtype">void</span> *opaque);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">void</span> *(*IteratorItem_t)(<span class="keywordtype">void</span> *opaque);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="iterator_8h.html#aaba1789d1636ce6c6d3944286b7e34b5">   24</a></span>&#160;<span class="preprocessor">#define IT_OPAQUE_DATA_SIZE 32</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_iterator_s</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    IteratorMove_t next;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    IteratorMove_t prev;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    IteratorDone_t done;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    IteratorItem_t item;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    Byte_t opaque_data[<a class="code" href="iterator_8h.html#aaba1789d1636ce6c6d3944286b7e34b5">IT_OPAQUE_DATA_SIZE</a>];</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;} <a class="code" href="classIterator__t.html">Iterator_t</a>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classIterator__t.html#a70e52dc1dc137adbd9192d3ed51f02ac">IteratorNext</a>(<a class="code" href="classIterator__t.html">Iterator_t</a> *it);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classIterator__t.html#a4b0979a07e3fd4efbec359f61330eb51">IteratorPrevious</a>(<a class="code" href="classIterator__t.html">Iterator_t</a> *it);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classIterator__t.html#aa73158a3c8e7585d737ead31a41f8361">IteratorDone</a>(<a class="code" href="classIterator__t.html">Iterator_t</a> *it);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordtype">void</span> *<a class="code" href="classIterator__t.html#a7a021c360403709fbb7ab6d6b8ae1f81">IteratorItem</a>(<a class="code" href="classIterator__t.html">Iterator_t</a> *it);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">typedef</span> void (*IteratorClose_t)(<span class="keywordtype">void</span> *opaque);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="iterator_8h.html#aaba1789d1636ce6c6d3944286b7e34b5">   25</a></span>&#160;<span class="preprocessor">#define IT_OPAQUE_DATA_SIZE 32</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_iterator_s</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    IteratorMove_t next;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    IteratorMove_t prev;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    IteratorDone_t done;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    IteratorItem_t item;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    IteratorClose_t close;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="classByte__t.html">Byte_t</a> opaque_data[<a class="code" href="iterator_8h.html#aaba1789d1636ce6c6d3944286b7e34b5">IT_OPAQUE_DATA_SIZE</a>];</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;} <a class="code" href="classIterator__t.html">Iterator_t</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classIterator__t.html#a70e52dc1dc137adbd9192d3ed51f02ac">IteratorNext</a>(<a class="code" href="classIterator__t.html">Iterator_t</a> *it);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classIterator__t.html#a4b0979a07e3fd4efbec359f61330eb51">IteratorPrevious</a>(<a class="code" href="classIterator__t.html">Iterator_t</a> *it);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classIterator__t.html#aa73158a3c8e7585d737ead31a41f8361">IteratorDone</a>(<a class="code" href="classIterator__t.html">Iterator_t</a> *it);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">void</span> *<a class="code" href="classIterator__t.html#a7a021c360403709fbb7ab6d6b8ae1f81">IteratorItem</a>(<a class="code" href="classIterator__t.html">Iterator_t</a> *it);</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classIterator__t.html#a7956a3d3f441a2666cf8d7e87e5bea17">IteratorClose</a>(<a class="code" href="classIterator__t.html">Iterator_t</a> *it);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="abasic__types_8h_html"><div class="ttname"><a href="basic__types_8h.html">basic_types.h</a></div></div>
+<div class="ttc" id="aclassByte__t_html"><div class="ttname"><a href="classByte__t.html">Byte_t</a></div><div class="ttdoc">The smallest addressable unit supported by the machine.</div></div>
 <div class="ttc" id="aclassIterator__t_html"><div class="ttname"><a href="classIterator__t.html">Iterator_t</a></div><div class="ttdoc">The iterator object. Used for looping over a collection objects (eg List_t, Buffer_t).</div></div>
 <div class="ttc" id="aclassIterator__t_html_a4b0979a07e3fd4efbec359f61330eb51"><div class="ttname"><a href="classIterator__t.html#a4b0979a07e3fd4efbec359f61330eb51">Iterator_t::IteratorPrevious</a></div><div class="ttdeci">void IteratorPrevious(Iterator_t *it)</div><div class="ttdoc">Move the iterator to the previous object.</div><div class="ttdef"><b>Definition:</b> iterator.c:8</div></div>
 <div class="ttc" id="aclassIterator__t_html_a70e52dc1dc137adbd9192d3ed51f02ac"><div class="ttname"><a href="classIterator__t.html#a70e52dc1dc137adbd9192d3ed51f02ac">Iterator_t::IteratorNext</a></div><div class="ttdeci">void IteratorNext(Iterator_t *it)</div><div class="ttdoc">Move the iterator to the next object.</div><div class="ttdef"><b>Definition:</b> iterator.c:3</div></div>
+<div class="ttc" id="aclassIterator__t_html_a7956a3d3f441a2666cf8d7e87e5bea17"><div class="ttname"><a href="classIterator__t.html#a7956a3d3f441a2666cf8d7e87e5bea17">Iterator_t::IteratorClose</a></div><div class="ttdeci">void IteratorClose(Iterator_t *it)</div><div class="ttdoc">Cleanup iterator.</div><div class="ttdef"><b>Definition:</b> iterator.c:23</div></div>
 <div class="ttc" id="aclassIterator__t_html_a7a021c360403709fbb7ab6d6b8ae1f81"><div class="ttname"><a href="classIterator__t.html#a7a021c360403709fbb7ab6d6b8ae1f81">Iterator_t::IteratorItem</a></div><div class="ttdeci">void * IteratorItem(Iterator_t *it)</div><div class="ttdoc">Returns a void* to the current item in the collection.</div><div class="ttdef"><b>Definition:</b> iterator.c:18</div></div>
 <div class="ttc" id="aclassIterator__t_html_aa73158a3c8e7585d737ead31a41f8361"><div class="ttname"><a href="classIterator__t.html#aa73158a3c8e7585d737ead31a41f8361">Iterator_t::IteratorDone</a></div><div class="ttdeci">bool IteratorDone(Iterator_t *it)</div><div class="ttdoc">Test if the iterator is done.</div><div class="ttdef"><b>Definition:</b> iterator.c:13</div></div>
-<div class="ttc" id="aiterator_8h_html_aaba1789d1636ce6c6d3944286b7e34b5"><div class="ttname"><a href="iterator_8h.html#aaba1789d1636ce6c6d3944286b7e34b5">IT_OPAQUE_DATA_SIZE</a></div><div class="ttdeci">#define IT_OPAQUE_DATA_SIZE</div><div class="ttdoc">The maximum size of an iterator's opaque data.</div><div class="ttdef"><b>Definition:</b> iterator.h:24</div></div>
+<div class="ttc" id="aiterator_8h_html_aaba1789d1636ce6c6d3944286b7e34b5"><div class="ttname"><a href="iterator_8h.html#aaba1789d1636ce6c6d3944286b7e34b5">IT_OPAQUE_DATA_SIZE</a></div><div class="ttdeci">#define IT_OPAQUE_DATA_SIZE</div><div class="ttdoc">The maximum size of an iterator's opaque data.</div><div class="ttdef"><b>Definition:</b> iterator.h:25</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

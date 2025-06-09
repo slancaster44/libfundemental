@@ -1,0 +1,56 @@
+\hypertarget{classString__t}{}\doxysection{String\+\_\+t Class Reference}
+\label{classString__t}\index{String\_t@{String\_t}}
+
+
+{\ttfamily \#include $<$constant\+\_\+string.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classString__t}{String\+\_\+t}} $\ast$ \mbox{\hyperlink{classString__t_a97ef2c7e795126ed4ddc7a3c6c62f066}{New\+String}} (char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Intern a c-\/string to the strings constant pool. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIterator__t}{Iterator\+\_\+t}} \mbox{\hyperlink{classString__t_a541352b60f9282cc9e8aa33d37efbd91}{New\+String\+Iterator}} (\mbox{\hyperlink{classString__t}{String\+\_\+t}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em Create a new iterator over a given string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A constant string. Creating two identical strings will return the same pointer
+
+Allows direct comparisons of strings 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classString__t_a97ef2c7e795126ed4ddc7a3c6c62f066}\label{classString__t_a97ef2c7e795126ed4ddc7a3c6c62f066}} 
+\index{String\_t@{String\_t}!NewString@{NewString}}
+\index{NewString@{NewString}!String\_t@{String\_t}}
+\doxysubsubsection{\texorpdfstring{NewString()}{NewString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classString__t}{String\+\_\+t}} $\ast$ New\+String (\begin{DoxyParamCaption}\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Intern a c-\/string to the strings constant pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The null terminated string to intern \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classString__t_a541352b60f9282cc9e8aa33d37efbd91}\label{classString__t_a541352b60f9282cc9e8aa33d37efbd91}} 
+\index{String\_t@{String\_t}!NewStringIterator@{NewStringIterator}}
+\index{NewStringIterator@{NewStringIterator}!String\_t@{String\_t}}
+\doxysubsubsection{\texorpdfstring{NewStringIterator()}{NewStringIterator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIterator__t}{Iterator\+\_\+t}} New\+String\+Iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classString__t}{String\+\_\+t}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Create a new iterator over a given string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The \mbox{\hyperlink{classString__t}{String\+\_\+t}} object to iterate over \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{constant__string_8h}{constant\+\_\+string.\+h}}\end{DoxyCompactItemize}

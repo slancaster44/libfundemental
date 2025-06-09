@@ -1,6 +1,6 @@
 <map id="inc/binary_map.h" name="inc/binary_map.h">
 <area shape="rect" id="node1" title=" " alt="" coords="115,5,250,32"/>
-<area shape="rect" id="node2" href="$basic__types_8h_source.html" title=" " alt="" coords="93,155,203,181"/>
+<area shape="rect" id="node2" href="$basic__types_8h.html" title=" " alt="" coords="93,155,203,181"/>
 <area shape="rect" id="node4" title=" " alt="" coords="224,229,307,256"/>
 <area shape="rect" id="node6" href="$arena_8h.html" title=" " alt="" coords="35,80,106,107"/>
 <area shape="rect" id="node7" href="$iterator_8h.html" title=" " alt="" coords="182,80,263,107"/>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['total_5fbuffer_5fsize_77',['TOTAL_BUFFER_SIZE',['../fixed__buffer_8h.html#a5a93f43a9d79a6808748cfd443364b33',1,'fixed_buffer.h']]]
+  ['signed_5ft_84',['Signed_t',['../classSigned__t.html',1,'']]],
+  ['string_5ft_85',['String_t',['../classString__t.html',1,'']]]
 ];
