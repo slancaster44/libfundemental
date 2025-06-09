@@ -48,6 +48,17 @@ typedef struct _fixed_buffer_s
 
 /**
  * @public @memberof Buffer_t
+ * @brief Initialize guarded buffer over statically
+ * or stack-allocated memory region
+ * 
+ * @param memory The memory to initialize the Buffer_t over
+ * @param data_width The width of a single element within the new buffer
+ * @param total_length The number of elements contained in the buffer
+ */
+Buffer_t *InitializeBuffer(Byte_t *memory, Unsigned_t data_width, Unsigned_t length);
+
+/**
+ * @public @memberof Buffer_t
  * Create a new buffer
  *
  * @param a The arena to allocate against

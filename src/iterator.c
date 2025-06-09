@@ -19,3 +19,11 @@ void *IteratorItem(Iterator_t *it)
 {
     return it->item(it->opaque_data);
 }
+
+void IteratorClose(Iterator_t *it)
+{
+    if (it->close != NULL)
+    {
+        it->close(it->opaque_data);
+    }
+}

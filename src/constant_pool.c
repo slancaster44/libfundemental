@@ -54,8 +54,3 @@ ConstantObject_t *NewConstant(ConstantPool_t *pool, void *value, Unsigned_t leng
 
     return obj;
 }
-
-ConstantObject_t *NewString(ConstantPool_t *pool, char *str)
-{
-    return NewConstant(pool, str, strlen(str));
-}

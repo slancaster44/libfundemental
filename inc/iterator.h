@@ -15,6 +15,7 @@
 typedef void (*IteratorMove_t)(void *opaque);
 typedef bool (*IteratorDone_t)(void *opaque);
 typedef void *(*IteratorItem_t)(void *opaque);
+typedef void (*IteratorClose_t)(void *opaque);
 
 /**
  * @def IT_OPAQUE_DATA_SIZE
@@ -46,6 +47,7 @@ typedef struct _iterator_s
     IteratorMove_t prev;
     IteratorDone_t done;
     IteratorItem_t item;
+    IteratorClose_t close;
     Byte_t opaque_data[IT_OPAQUE_DATA_SIZE];
 } Iterator_t;
 
@@ -91,6 +93,12 @@ bool IteratorDone(Iterator_t *it);
  */
 void *IteratorItem(Iterator_t *it);
 
-
+/**
+ * @public @memberof Iterator_t
+ * @brief Cleanup iterator
+ * 
+ * @param it The iterator to cleanup
+ */
+void IteratorClose(Iterator_t *it);
 
 #endif

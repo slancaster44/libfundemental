@@ -9,6 +9,14 @@ Buffer_t *NewBuffer(Arena_t *a, Unsigned_t data_width, Unsigned_t length)
     return b;
 }
 
+Buffer_t *InitializeBuffer(Byte_t *memory, Unsigned_t data_width, Unsigned_t length)
+{
+    Buffer_t *b = (Buffer_t*) memory;
+    b->length = length;
+    b->data_width = data_width;
+    return b;
+}
+
 void *BufferIndex(Buffer_t *b, Unsigned_t idx)
 {
     assert(idx <= b->length);
@@ -54,4 +62,49 @@ Unsigned_t RawBufferHash(Byte_t *buff, Unsigned_t length)
 Unsigned_t BufferHash(Buffer_t *b)
 {
     return RawBufferHash((Byte_t *)b, TOTAL_BUFFER_SIZE(b));
+}
+
+typedef struct _fixed_buffer_it_s
+{
+    Buffer_t *buffer;
+    Unsigned_t cur_idx;
+} BufferItOpaque_t;
+
+_Static_assert(sizeof(BufferItOpaque_t) <= IT_OPAQUE_DATA_SIZE, "Buffer iterator opaque size too large");
+
+void BufferIteratorNext(BufferItOpaque_t *opaque)
+{
+    opaque->cur_idx++;
+}
+
+void BufferIteratorPrev(BufferItOpaque_t *opaque)
+{
+    opaque->cur_idx--;
+}
+
+bool BufferIteratorDone(BufferItOpaque_t *opaque)
+{
+    return opaque->cur_idx > opaque->buffer->length;
+}
+
+void *BufferIteratorItem(BufferItOpaque_t *opaque)
+{
+    return BufferIndex(opaque->buffer, opaque->cur_idx);
+}
+
+Iterator_t NewBufferIterator(Buffer_t *buffer)
+{
+    Iterator_t it = {
+        (IteratorMove_t) BufferIteratorNext,
+        (IteratorMove_t) BufferIteratorPrev,
+        (IteratorDone_t) BufferIteratorDone,
+        (IteratorItem_t) BufferIteratorItem,
+        NULL,
+    };
+
+    BufferItOpaque_t *opaque = (BufferItOpaque_t*) it.opaque_data;
+    opaque->cur_idx = 0;
+    opaque->buffer = buffer;
+
+    return it;
 }

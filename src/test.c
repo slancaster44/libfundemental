@@ -8,6 +8,8 @@
 #include "linked_list.h"
 #include "constant_pool.h"
 #include "binary_map.h"
+#include "file_iterator.h"
+#include "constant_string.h"
 
 static int num_failed;
 static int num_passed;
@@ -118,7 +120,8 @@ Unsigned_t TestBuffer()
     }
 
     Unsigned_t i = 0;
-    for (Iterator_t it = NewBufferIterator(buff2); !IteratorDone(&it); IteratorNext(&it))
+    Iterator_t it;
+    for (it = NewBufferIterator(buff2); !IteratorDone(&it); IteratorNext(&it))
     {
         Unsigned_t *j = IteratorItem(&it);
         if (*j != i)
@@ -128,6 +131,7 @@ Unsigned_t TestBuffer()
 
         i++;
     }
+    IteratorClose(&it);
 
     DeconstructArena(&a);
     return 0;
@@ -344,10 +348,12 @@ int test_map()
     }
 
     Unsigned_t key_sum = 0;
-    for (Iterator_t it = NewMapKeyIterator(&map); !IteratorDone(&it); IteratorNext(&it))
+    Iterator_t it;
+    for (it = NewMapKeyIterator(&map); !IteratorDone(&it); IteratorNext(&it))
     {
         key_sum += (*(Unsigned_t*) IteratorItem(&it));
     }
+    IteratorClose(&it);
 
     if (map.root->right->left == NULL)
     {
@@ -365,11 +371,9 @@ int test_map()
 
 int test_string_interning()
 {
-    ConstantPool_t *pool = NewConstantPool(&ARENA_PERM);
-
-    ConstantObject_t *hello = NewString(pool, "Hello");
-    ConstantObject_t *hallo = NewString(pool, "Hello");
-    ConstantObject_t *not_hello = NewConstant(pool, "AAA\0AAAAA", 9);
+    String_t *hello = NewString("Hello");
+    String_t *hallo = NewString("Hello");
+    String_t *not_hello = NewString("AAAAAAAAA");
 
     if (hello != hallo)
     {
@@ -388,15 +392,52 @@ int test_string_interning()
 
     for (int i = 0; i < 9; i++)
     {
-        if (i == 3 && not_hello->value[i] != '\0')
-        {
-            return 4;
-        }
-
-        if (i != 3 && not_hello->value[i] != 'A')
+        if (not_hello->value[i] != 'A')
         {
             return 5;
         }
+    }
+
+    return 0;
+}
+
+int test_file_it()
+{
+    Iterator_t it = NewFileIterator("./test_artifacts/test_file.txt");
+    Byte_t string[16 + sizeof(Buffer_t)];
+    memset(string, 0, sizeof(string));
+    Buffer_t *str = InitializeBuffer(string, sizeof(Byte_t), sizeof(string) / sizeof(Byte_t));
+
+    Unsigned_t idx = 0;
+    while (!IteratorDone(&it))
+    {
+        BufferInsert(str, idx, IteratorItem(&it));
+        IteratorNext(&it);
+        idx++;
+    }
+
+    if (strcmp((char*) str->data, "Hello, World") != 0)
+    {
+        return 1;
+    }
+
+    IteratorPrevious(&it);
+    if (IteratorDone(&it))
+    {
+        return 2;
+    }
+
+    Byte_t last_char = (*(Byte_t*) IteratorItem(&it));
+    if (last_char != 'd')
+    {
+        return 3;
+    }
+
+    IteratorPrevious(&it);
+    last_char = (*(Byte_t*) IteratorItem(&it));
+    if (last_char != 'l')
+    {
+        return 4;
     }
 
     return 0;
@@ -410,6 +451,7 @@ int main()
     TEST(TestList() == 0, "List test")
     TEST(test_string_interning() == 0, "String interning")
     TEST(test_map() == 0, "Map test")
+    TEST(test_file_it() == 0, "File iterator test")
 
     printf("Tests Passed: %d\nTests Failed: %d\n", num_passed, num_failed);
     return 0;

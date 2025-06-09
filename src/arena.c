@@ -41,6 +41,10 @@ void *ArenaAllocate(Arena_t *a, Unsigned_t size)
     {
         return malloc(size);
     }
+    else if (a == &ARENA_PERM && a == NULL)
+    {
+        ConstructArena(&ARENA_PERM);
+    }
 
     size = AlignInteger(size, MACHINE_ALIGNMENT);
     size = size > ARENA_BLOCK_SIZE ? size : ARENA_BLOCK_SIZE;
@@ -66,14 +70,4 @@ void *ArenaAllocate(Arena_t *a, Unsigned_t size)
     memset(user_pointer, 0, size);
 
     return user_pointer;
-}
-
-__attribute__((constructor)) void construct_perm()
-{
-    ConstructArena(&ARENA_PERM);
-}
-
-__attribute__((destructor)) void deconstruct_perm()
-{
-    DeconstructArena(&ARENA_PERM);
 }

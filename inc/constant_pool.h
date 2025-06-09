@@ -90,13 +90,4 @@ ConstantPool_t *NewConstantPool(Arena_t *a);
  */
 ConstantObject_t *NewConstant(ConstantPool_t *pool, void *value, Unsigned_t length);
 
-/**
- * @public @memberof ConstantPool_t
- * Add a c-string to a constant pool
- *
- * @param pool The pool to intern the string against
- * @param str The null terminated string to intern
- */
-ConstantObject_t *NewString(ConstantPool_t *pool, char *str);
-
 #endif

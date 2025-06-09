@@ -19,6 +19,12 @@
 typedef unsigned char Byte_t;
 
 /**
+ * @class Character_t
+ * @brief A ASCII single-byte character
+ */
+typedef char Character_t;
+
+/**
  * @class Unsigned_t
  * The word-length unsigned type. Should have
  * same with as void*
